@@ -1,0 +1,84 @@
+module controle(out, crianca, communication, button, clk);
+
+input clk, button, communication, crianca;
+output[2:0] out;
+
+parameter WAIT=5'b10000,STAND_BY= 5'b00000,
+			LED=5'b01001, LED_VIBRA1=5'b01011,
+			LED_VIBRA2=5'b11011,LED_VIBRA_APITA=5'b01111;
+
+reg[4:0] state;
+
+always @(posedge clk)
+begin	:	FSM
+if(button == 1'b1)
+begin
+	case(state)
+	LED 			: 	begin
+							#100;
+							state<=LED_VIBRA2;
+						end
+	LED_VIBRA1		: state<=LED_VIBRA2;
+	LED_VIBRA_APITA	: state<=LED_VIBRA2;
+	default 		: state<=state;
+	endcase
+end else
+	case(state)
+		WAIT 			: begin
+							if(crianca==1'b1 && communication==1'b0)
+							begin
+								state<=LED;
+							end if(crianca==1'b0 && communication==1'b0)
+								begin
+									state<=STAND_BY;
+								end
+						 end
+		STAND_BY 		: begin
+							if(communication==1'b1)
+							begin
+								state<=WAIT;
+							end
+						 end
+		LED		 		: begin
+							if(crianca==1'b0)
+							begin
+								state<=WAIT;
+							end else
+								begin
+									#50;
+									state<=LED_VIBRA1;
+								end
+						 end
+		LED_VIBRA1		: begin
+							if(crianca==1'b0)
+							begin
+								state<=WAIT;
+							end else
+								begin
+									#80;
+									state<=LED_VIBRA_APITA;
+								end
+						 end
+		LED_VIBRA2		: begin
+							if(crianca==1'b0)
+							begin
+								state<=WAIT;
+							end else
+								begin
+									#80;
+									state<=LED_VIBRA_APITA;	
+								end
+						 end
+		LED_VIBRA_APITA : begin
+							if(crianca==1'b0)
+							begin
+								state<=WAIT;
+							end
+						 end
+		default 		: begin
+							state<=WAIT;
+						 end
+	endcase
+end
+
+endmodule

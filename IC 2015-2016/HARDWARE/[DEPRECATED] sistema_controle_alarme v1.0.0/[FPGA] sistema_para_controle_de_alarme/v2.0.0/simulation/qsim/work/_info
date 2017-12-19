@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Wagner\Documents\ufg\iniciação cientifica -2015-1 - FPGA\Projeto\Sistema para controle de alarme\simulation\qsim
+vcontrole
+Z1 IhDE@FJFMg>hVXBGM8OAZi0
+Z2 VC;SmmkU6dHo4OADC90MX^2
+Z3 dC:\Users\Wagner\Documents\ufg\Iniciação Cientifica -2015-1 - FPGA\Projeto\Sistema para controle de alarme\simulation\qsim
+Z4 w1440006478
+Z5 8controle.vo
+Z6 Fcontrole.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|controle.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 10mWGU5oAJCgk[Q@FE_UF3
+!s85 0
+Z11 !s108 1440006481.614000
+Z12 !s107 controle.vo|
+!s101 -O0
+vcontrole_vlg_check_tst
+!i10b 1
+!s100 @c`:E2WTQLMBS3_JO618U3
+IP<L]Rd=DMhaX[]F9HENXG1
+Z13 VSK=Ggk?LLe<4l>]fm1GaI1
+R3
+R4
+Z14 8controle.vt
+Z15 Fcontrole.vt
+L0 63
+R7
+r1
+!s85 0
+31
+Z16 !s108 1440006481.911000
+Z17 !s107 controle.vt|
+Z18 !s90 -work|work|controle.vt|
+!s101 -O0
+R9
+vcontrole_vlg_sample_tst
+!i10b 1
+Z19 !s100 b39D2NEI<abG@[1T6V@VF2
+Z20 ISHfgDAK>TYJ_Nl41?;Hl]3
+Z21 V[gQ3SA<ajL>fbKRDF^M8F1
+R3
+R4
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R9
+vcontrole_vlg_vec_tst
+!i10b 1
+!s100 IijRi;lhGh?U[EN;VXNj21
+I5CR1Do^R]8Dbfl@DA4JAB0
+Z22 V[WQ3E_@z_Y9W=S=A8l`lN2
+R3
+R4
+R14
+R15
+L0 220
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R9

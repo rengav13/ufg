@@ -1,0 +1,1746 @@
+TimeQuest Timing Analyzer report for teste_Mod_comm
+Sat Dec 19 20:12:23 2015
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clock'
+ 12. Slow Model Setup: 'count[25]'
+ 13. Slow Model Hold: 'clock'
+ 14. Slow Model Hold: 'count[25]'
+ 15. Slow Model Minimum Pulse Width: 'clock'
+ 16. Slow Model Minimum Pulse Width: 'count[25]'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'clock'
+ 27. Fast Model Setup: 'count[25]'
+ 28. Fast Model Hold: 'clock'
+ 29. Fast Model Hold: 'count[25]'
+ 30. Fast Model Minimum Pulse Width: 'clock'
+ 31. Fast Model Minimum Pulse Width: 'count[25]'
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Multicorner Timing Analysis Summary
+ 37. Setup Times
+ 38. Hold Times
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; teste_Mod_comm                                                    ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets       ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock }     ;
+; count[25]  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { count[25] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 148.39 MHz ; 148.39 MHz      ; clock      ;      ;
+; 364.56 MHz ; 364.56 MHz      ; count[25]  ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow Model Setup Summary           ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; clock     ; -5.739 ; -583.950      ;
+; count[25] ; -1.743 ; -13.086       ;
++-----------+--------+---------------+
+
+
++------------------------------------+
+; Slow Model Hold Summary            ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; clock     ; -2.070 ; -2.070        ;
+; count[25] ; 0.106  ; 0.000         ;
++-----------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-----------+--------+-------------------+
+; Clock     ; Slack  ; End Point TNS     ;
++-----------+--------+-------------------+
+; clock     ; -1.380 ; -244.380          ;
+; count[25] ; -0.500 ; -18.000           ;
++-----------+--------+-------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clock'                                                                                                                                   ;
++--------+---------------------------------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                         ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; -5.739 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; -0.002     ; 6.773      ;
+; -5.622 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; -0.002     ; 6.656      ;
+; -5.461 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; -0.002     ; 6.495      ;
+; -5.357 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; -0.002     ; 6.391      ;
+; -5.294 ; suav:suaviza|t_Count[3]                           ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; -0.002     ; 6.328      ;
+; -5.216 ; suav:suaviza|t_Count[4]                           ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; -0.002     ; 6.250      ;
+; -5.153 ; suav:suaviza|t_Count[5]                           ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; -0.002     ; 6.187      ;
+; -5.145 ; suav:suaviza|t_Count[14]                          ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; -0.002     ; 6.179      ;
+; -5.082 ; suav:suaviza|t_Count[6]                           ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; -0.002     ; 6.116      ;
+; -4.977 ; suav:suaviza|t_Count[7]                           ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; -0.002     ; 6.011      ;
+; -4.812 ; suav:suaviza|t_Count[8]                           ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; -0.002     ; 5.846      ;
+; -4.781 ; suav:suaviza|t_Count[9]                           ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; -0.002     ; 5.815      ;
+; -4.709 ; suav:suaviza|t_Count[10]                          ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; -0.002     ; 5.743      ;
+; -4.628 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.664      ;
+; -4.600 ; suav:suaviza|t_Count[11]                          ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; -0.002     ; 5.634      ;
+; -4.569 ; suav:suaviza|t_Count[12]                          ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; -0.002     ; 5.603      ;
+; -4.510 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.546      ;
+; -4.479 ; suav:suaviza|t_Count[15]                          ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; -0.003     ; 5.512      ;
+; -4.458 ; suav:suaviza|t_Count[13]                          ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; -0.002     ; 5.492      ;
+; -4.350 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.386      ;
+; -4.285 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[14] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.321      ;
+; -4.271 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[31] ; clock        ; clock       ; 1.000        ; -0.003     ; 5.304      ;
+; -4.245 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|t_Count[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.281      ;
+; -4.214 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[18] ; clock        ; clock       ; 1.000        ; -0.005     ; 5.245      ;
+; -4.200 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[30] ; clock        ; clock       ; 1.000        ; -0.003     ; 5.233      ;
+; -4.182 ; suav:suaviza|t_Count[3]                           ; suav:suaviza|t_Count[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.218      ;
+; -4.168 ; suav:suaviza|t_Count[19]                          ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; 0.001      ; 5.205      ;
+; -4.167 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[14] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.203      ;
+; -4.157 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[10] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.193      ;
+; -4.157 ; suav:suaviza|t_Count[16]                          ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; 0.003      ; 5.196      ;
+; -4.154 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[31] ; clock        ; clock       ; 1.000        ; -0.003     ; 5.187      ;
+; -4.129 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[29] ; clock        ; clock       ; 1.000        ; -0.003     ; 5.162      ;
+; -4.124 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[17] ; clock        ; clock       ; 1.000        ; -0.005     ; 5.155      ;
+; -4.104 ; suav:suaviza|t_Count[4]                           ; suav:suaviza|t_Count[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.140      ;
+; -4.097 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[18] ; clock        ; clock       ; 1.000        ; -0.005     ; 5.128      ;
+; -4.088 ; suav:suaviza|t_Count[27]                          ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; 0.001      ; 5.125      ;
+; -4.085 ; suav:suaviza|t_Count[17]                          ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; 0.003      ; 5.124      ;
+; -4.083 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[30] ; clock        ; clock       ; 1.000        ; -0.003     ; 5.116      ;
+; -4.069 ; suav:suaviza|t_Count[20]                          ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; 0.001      ; 5.106      ;
+; -4.058 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[28] ; clock        ; clock       ; 1.000        ; -0.003     ; 5.091      ;
+; -4.039 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[10] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.075      ;
+; -4.034 ; suav:suaviza|t_Count[5]                           ; suav:suaviza|t_Count[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.070      ;
+; -4.014 ; suav:suaviza|t_Count[18]                          ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; 0.003      ; 5.053      ;
+; -4.012 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[29] ; clock        ; clock       ; 1.000        ; -0.003     ; 5.045      ;
+; -4.007 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[14] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.043      ;
+; -4.006 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[17] ; clock        ; clock       ; 1.000        ; -0.005     ; 5.037      ;
+; -3.993 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[31] ; clock        ; clock       ; 1.000        ; -0.003     ; 5.026      ;
+; -3.991 ; suav:suaviza|t_Count[21]                          ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; 0.001      ; 5.028      ;
+; -3.987 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[27] ; clock        ; clock       ; 1.000        ; -0.003     ; 5.020      ;
+; -3.957 ; suav:suaviza|t_Count[6]                           ; suav:suaviza|t_Count[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 4.993      ;
+; -3.941 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[28] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.974      ;
+; -3.936 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[18] ; clock        ; clock       ; 1.000        ; -0.005     ; 4.967      ;
+; -3.922 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[30] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.955      ;
+; -3.916 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[26] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.949      ;
+; -3.902 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|t_Count[14] ; clock        ; clock       ; 1.000        ; 0.000      ; 4.938      ;
+; -3.889 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|t_Count[31] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.922      ;
+; -3.879 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[10] ; clock        ; clock       ; 1.000        ; 0.000      ; 4.915      ;
+; -3.875 ; suav:suaviza|t_Count[22]                          ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; 0.001      ; 4.912      ;
+; -3.870 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[27] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.903      ;
+; -3.853 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[16] ; clock        ; clock       ; 1.000        ; -0.005     ; 4.884      ;
+; -3.852 ; suav:suaviza|t_Count[7]                           ; suav:suaviza|t_Count[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 4.888      ;
+; -3.851 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[29] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.884      ;
+; -3.846 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[17] ; clock        ; clock       ; 1.000        ; -0.005     ; 4.877      ;
+; -3.845 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[25] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.878      ;
+; -3.839 ; suav:suaviza|t_Count[3]                           ; suav:suaviza|t_Count[14] ; clock        ; clock       ; 1.000        ; 0.000      ; 4.875      ;
+; -3.832 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|t_Count[18] ; clock        ; clock       ; 1.000        ; -0.005     ; 4.863      ;
+; -3.826 ; suav:suaviza|t_Count[3]                           ; suav:suaviza|t_Count[31] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.859      ;
+; -3.818 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|t_Count[30] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.851      ;
+; -3.799 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[26] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.832      ;
+; -3.780 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[28] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.813      ;
+; -3.774 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[24] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.807      ;
+; -3.774 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|t_Count[10] ; clock        ; clock       ; 1.000        ; 0.000      ; 4.810      ;
+; -3.772 ; suav:suaviza|t_Count[23]                          ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; 0.001      ; 4.809      ;
+; -3.769 ; suav:suaviza|t_Count[3]                           ; suav:suaviza|t_Count[18] ; clock        ; clock       ; 1.000        ; -0.005     ; 4.800      ;
+; -3.761 ; suav:suaviza|t_Count[4]                           ; suav:suaviza|t_Count[14] ; clock        ; clock       ; 1.000        ; 0.000      ; 4.797      ;
+; -3.755 ; suav:suaviza|t_Count[3]                           ; suav:suaviza|t_Count[30] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.788      ;
+; -3.748 ; suav:suaviza|t_Count[4]                           ; suav:suaviza|t_Count[31] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.781      ;
+; -3.747 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|t_Count[29] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.780      ;
+; -3.741 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|t_Count[17] ; clock        ; clock       ; 1.000        ; -0.005     ; 4.772      ;
+; -3.735 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[16] ; clock        ; clock       ; 1.000        ; -0.005     ; 4.766      ;
+; -3.728 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[25] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.761      ;
+; -3.711 ; suav:suaviza|t_Count[3]                           ; suav:suaviza|t_Count[10] ; clock        ; clock       ; 1.000        ; 0.000      ; 4.747      ;
+; -3.709 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[27] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.742      ;
+; -3.703 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[12] ; clock        ; clock       ; 1.000        ; 0.000      ; 4.739      ;
+; -3.691 ; suav:suaviza|t_Count[5]                           ; suav:suaviza|t_Count[14] ; clock        ; clock       ; 1.000        ; 0.000      ; 4.727      ;
+; -3.691 ; suav:suaviza|t_Count[4]                           ; suav:suaviza|t_Count[18] ; clock        ; clock       ; 1.000        ; -0.005     ; 4.722      ;
+; -3.687 ; suav:suaviza|t_Count[8]                           ; suav:suaviza|t_Count[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 4.723      ;
+; -3.685 ; suav:suaviza|t_Count[5]                           ; suav:suaviza|t_Count[31] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.718      ;
+; -3.684 ; suav:suaviza|t_Count[3]                           ; suav:suaviza|t_Count[29] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.717      ;
+; -3.678 ; suav:suaviza|t_Count[3]                           ; suav:suaviza|t_Count[17] ; clock        ; clock       ; 1.000        ; -0.005     ; 4.709      ;
+; -3.677 ; suav:suaviza|t_Count[14]                          ; suav:suaviza|t_Count[31] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.710      ;
+; -3.677 ; suav:suaviza|t_Count[4]                           ; suav:suaviza|t_Count[30] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.710      ;
+; -3.676 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|t_Count[28] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.709      ;
+; -3.657 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[24] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.690      ;
+; -3.656 ; suav:suaviza|t_Count[9]                           ; suav:suaviza|t_Count[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 4.692      ;
+; -3.651 ; suav:suaviza|t_Count[26]                          ; suav:suaviza|out         ; clock        ; clock       ; 1.000        ; 0.001      ; 4.688      ;
+; -3.638 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[26] ; clock        ; clock       ; 1.000        ; -0.003     ; 4.671      ;
+; -3.635 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[11] ; clock        ; clock       ; 1.000        ; 0.000      ; 4.671      ;
+; -3.633 ; suav:suaviza|t_Count[4]                           ; suav:suaviza|t_Count[10] ; clock        ; clock       ; 1.000        ; 0.000      ; 4.669      ;
+; -3.628 ; suav:suaviza|t_Count[5]                           ; suav:suaviza|t_Count[18] ; clock        ; clock       ; 1.000        ; -0.005     ; 4.659      ;
++--------+---------------------------------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'count[25]'                                                                                    ;
++--------+-------------+---------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node   ; To Node             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------+---------------------+--------------+-------------+--------------+------------+------------+
+; -1.743 ; estado.0010 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 2.784      ;
+; -1.661 ; estado.0100 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 2.699      ;
+; -1.660 ; estado.0101 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 2.698      ;
+; -1.651 ; estado.0100 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 2.695      ;
+; -1.635 ; estado.0001 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 2.673      ;
+; -1.631 ; estado.0100 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 2.669      ;
+; -1.622 ; estado.0100 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 2.666      ;
+; -1.617 ; estado.0010 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 2.661      ;
+; -1.601 ; estado.0101 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 2.645      ;
+; -1.581 ; estado.0011 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 2.625      ;
+; -1.573 ; estado.0101 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 2.614      ;
+; -1.569 ; estado.0110 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 2.613      ;
+; -1.561 ; estado.0010 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 2.602      ;
+; -1.552 ; estado.0011 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.004      ; 2.592      ;
+; -1.550 ; estado.0011 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 2.594      ;
+; -1.542 ; estado.0100 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.004      ; 2.582      ;
+; -1.527 ; estado.0110 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 2.568      ;
+; -1.482 ; estado.0001 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 2.523      ;
+; -1.482 ; estado.0111 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 2.523      ;
+; -1.469 ; estado.0111 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 2.510      ;
+; -1.457 ; estado.0001 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 2.495      ;
+; -1.448 ; estado.0101 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 2.486      ;
+; -1.438 ; estado.0010 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 2.482      ;
+; -1.394 ; estado.0101 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 2.438      ;
+; -1.385 ; estado.0011 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 2.426      ;
+; -1.377 ; estado.0111 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.004      ; 2.417      ;
+; -1.371 ; estado.0110 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 2.409      ;
+; -1.369 ; estado.0011 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 2.407      ;
+; -1.360 ; estado.0110 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 2.404      ;
+; -1.351 ; estado.0110 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.000      ; 2.387      ;
+; -1.345 ; estado.0101 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.004      ; 2.385      ;
+; -1.337 ; estado.0011 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 2.375      ;
+; -1.326 ; estado.0011 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.000      ; 2.362      ;
+; -1.321 ; estado.0001 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 2.365      ;
+; -1.318 ; estado.0100 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 2.359      ;
+; -1.316 ; estado.0010 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 2.354      ;
+; -1.310 ; estado.0110 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.004      ; 2.350      ;
+; -1.297 ; estado.0100 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.000      ; 2.333      ;
+; -1.294 ; estado.0010 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.004      ; 2.334      ;
+; -1.287 ; estado.1000 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 2.325      ;
+; -1.270 ; estado.1000 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 2.314      ;
+; -1.249 ; estado.0100 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 2.290      ;
+; -1.248 ; estado.0111 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 2.286      ;
+; -1.246 ; estado.0001 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 2.287      ;
+; -1.244 ; estado.1000 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 2.282      ;
+; -1.224 ; estado.0111 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 2.268      ;
+; -1.218 ; estado.1000 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 2.259      ;
+; -1.215 ; estado.1000 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 2.256      ;
+; -1.208 ; estado.0101 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 2.249      ;
+; -1.206 ; estado.1000 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 2.250      ;
+; -1.198 ; estado.0111 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 2.236      ;
+; -1.164 ; estado.0111 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 2.208      ;
+; -1.159 ; estado.0110 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 2.197      ;
+; -1.155 ; estado.0101 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.000      ; 2.191      ;
+; -1.142 ; estado.0001 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 2.186      ;
+; -1.138 ; estado.0010 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 2.176      ;
+; -1.130 ; estado.0001 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.000      ; 2.166      ;
+; -1.122 ; estado.1000 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.004      ; 2.162      ;
+; -1.034 ; estado.0001 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.004      ; 2.074      ;
+; -1.020 ; estado.0011 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 2.061      ;
+; -0.974 ; estado.0010 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.000      ; 2.010      ;
+; -0.957 ; estado.1001 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.995      ;
+; -0.957 ; estado.1001 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.995      ;
+; -0.895 ; estado.0110 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 1.936      ;
+; -0.893 ; estado.1001 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 1.937      ;
+; -0.893 ; estado.1001 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 1.937      ;
+; -0.888 ; estado.1000 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.000      ; 1.924      ;
+; -0.842 ; estado.0111 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.000      ; 1.878      ;
+; -0.780 ; buffer[9]   ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.723      ; 2.539      ;
+; -0.665 ; estado.0000 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 1.709      ;
+; -0.664 ; estado.0000 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.008      ; 1.708      ;
+; -0.646 ; estado.0000 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.684      ;
+; -0.642 ; estado.0000 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.680      ;
+; -0.636 ; buffer[43]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.730      ; 2.402      ;
+; -0.631 ; estado.1001 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.004      ; 1.671      ;
+; -0.627 ; estado.1001 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 1.668      ;
+; -0.627 ; estado.1001 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 1.668      ;
+; -0.620 ; buffer[33]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.723      ; 2.379      ;
+; -0.603 ; buffer[35]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.730      ; 2.369      ;
+; -0.602 ; buffer[38]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.723      ; 2.361      ;
+; -0.592 ; buffer[32]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.725      ; 2.353      ;
+; -0.570 ; buffer[44]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.723      ; 2.329      ;
+; -0.561 ; buffer[24]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.725      ; 2.322      ;
+; -0.469 ; buffer[40]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.725      ; 2.230      ;
+; -0.452 ; buffer[45]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.723      ; 2.211      ;
+; -0.441 ; buffer[28]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.723      ; 2.200      ;
+; -0.435 ; buffer[59]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.723      ; 2.194      ;
+; -0.412 ; buffer[22]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.723      ; 2.171      ;
+; -0.410 ; buffer[34]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.723      ; 2.169      ;
+; -0.404 ; buffer[4]   ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.727      ; 2.167      ;
+; -0.397 ; buffer[57]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.723      ; 2.156      ;
+; -0.387 ; buffer[53]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.723      ; 2.146      ;
+; -0.385 ; buffer[17]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.723      ; 2.144      ;
+; -0.373 ; buffer[58]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.723      ; 2.132      ;
+; -0.371 ; buffer[49]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.723      ; 2.130      ;
+; -0.368 ; estado.1001 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.000      ; 1.404      ;
+; -0.342 ; buffer[11]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.723      ; 2.101      ;
+; -0.328 ; buffer[47]  ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.723      ; 2.087      ;
+; -0.327 ; estado.0000 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 1.368      ;
+; -0.325 ; buffer[19]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.724      ; 2.085      ;
++--------+-------------+---------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clock'                                                                                                                                                             ;
++--------+---------------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                         ; To Node                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.070 ; count[25]                                         ; count[25]                                         ; count[25]    ; clock       ; 0.000        ; 2.658      ; 1.104      ;
+; -1.570 ; count[25]                                         ; count[25]                                         ; count[25]    ; clock       ; -0.500       ; 2.658      ; 1.104      ;
+; 0.391  ; count[0]                                          ; count[0]                                          ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; Package_slicer:slicer|count_FSM[0]                ; Package_slicer:slicer|count_FSM[0]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; Package_slicer:slicer|count_FSM[1]                ; Package_slicer:slicer|count_FSM[1]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; Package_slicer:slicer|count_FSM[2]                ; Package_slicer:slicer|count_FSM[2]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; Package_slicer:slicer|count_FSM[3]                ; Package_slicer:slicer|count_FSM[3]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; Package_slicer:slicer|state.010                   ; Package_slicer:slicer|state.010                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; Package_slicer:slicer|busy                        ; Package_slicer:slicer|busy                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; Package_slicer:slicer|position[47]                ; Package_slicer:slicer|position[47]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; Package_slicer:slicer|position[55]                ; Package_slicer:slicer|position[55]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; Package_slicer:slicer|position[63]                ; Package_slicer:slicer|position[63]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; state                                             ; state                                             ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; Package_slicer:slicer|position[57]                ; Package_slicer:slicer|position[57]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; Package_slicer:slicer|position[32]                ; Package_slicer:slicer|position[32]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; Package_slicer:slicer|position[26]                ; Package_slicer:slicer|position[26]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; Package_slicer:slicer|position[34]                ; Package_slicer:slicer|position[34]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; Package_slicer:slicer|position[58]                ; Package_slicer:slicer|position[58]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; Package_slicer:slicer|position[51]                ; Package_slicer:slicer|position[51]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; Package_slicer:slicer|position[59]                ; Package_slicer:slicer|position[59]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; Package_slicer:slicer|position[60]                ; Package_slicer:slicer|position[60]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; Package_slicer:slicer|position[45]                ; Package_slicer:slicer|position[45]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.517  ; suav:suaviza|shift_register_v:vec|bitShiftReg[15] ; suav:suaviza|shift_register_v:vec|bitShiftReg[16] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.783      ;
+; 0.520  ; buffer[24]                                        ; buffer[32]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.786      ;
+; 0.521  ; Package_slicer:slicer|count_delay[31]             ; Package_slicer:slicer|count_delay[31]             ; clock        ; clock       ; 0.000        ; 0.000      ; 0.787      ;
+; 0.521  ; Package_slicer:slicer|position[46]                ; Package_slicer:slicer|position[54]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.787      ;
+; 0.521  ; Package_slicer:slicer|position[54]                ; Package_slicer:slicer|position[62]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.787      ;
+; 0.522  ; suav:suaviza|shift_register_v:vec|bitShiftReg[6]  ; suav:suaviza|shift_register_v:vec|bitShiftReg[7]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.788      ;
+; 0.522  ; suav:suaviza|shift_register_v:vec|bitShiftReg[10] ; suav:suaviza|shift_register_v:vec|bitShiftReg[11] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.788      ;
+; 0.522  ; suav:suaviza|shift_register_v:vec|bitShiftReg[16] ; suav:suaviza|shift_register_v:vec|bitShiftReg[17] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.788      ;
+; 0.522  ; Package_slicer:slicer|position[35]                ; Package_slicer:slicer|position[43]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.788      ;
+; 0.523  ; suav:suaviza|shift_register_v:vec|bitShiftReg[11] ; suav:suaviza|shift_register_v:vec|bitShiftReg[12] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.789      ;
+; 0.523  ; suav:suaviza|shift_register_v:vec|bitShiftReg[12] ; suav:suaviza|shift_register_v:vec|bitShiftReg[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.789      ;
+; 0.523  ; Package_slicer:slicer|position[34]                ; Package_slicer:slicer|position[42]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.789      ;
+; 0.524  ; suav:suaviza|shift_register_v:vec|bitShiftReg[13] ; suav:suaviza|shift_register_v:vec|bitShiftReg[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.790      ;
+; 0.525  ; suav:suaviza|shift_register_v:vec|bitShiftReg[14] ; suav:suaviza|shift_register_v:vec|bitShiftReg[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.791      ;
+; 0.525  ; Package_slicer:slicer|position[40]                ; Package_slicer:slicer|position[48]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.791      ;
+; 0.525  ; Package_slicer:slicer|position[42]                ; Package_slicer:slicer|position[50]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.791      ;
+; 0.525  ; buffer[49]                                        ; buffer[57]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.791      ;
+; 0.526  ; suav:suaviza|shift_register_v:vec|bitShiftReg[4]  ; suav:suaviza|shift_register_v:vec|bitShiftReg[5]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.792      ;
+; 0.526  ; suav:suaviza|shift_register_v:vec|bitShiftReg[8]  ; suav:suaviza|shift_register_v:vec|bitShiftReg[9]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.792      ;
+; 0.526  ; buffer[59]                                        ; buffer[67]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.792      ;
+; 0.528  ; buffer[56]                                        ; buffer[64]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.794      ;
+; 0.529  ; Package_slicer:slicer|position[60]                ; Package_slicer:slicer|data_out[4]                 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.795      ;
+; 0.529  ; Package_slicer:slicer|position[24]                ; Package_slicer:slicer|position[37]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.795      ;
+; 0.529  ; buffer[16]                                        ; buffer[24]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.795      ;
+; 0.529  ; buffer[45]                                        ; buffer[53]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.795      ;
+; 0.529  ; buffer[47]                                        ; buffer[55]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.795      ;
+; 0.529  ; Package_slicer:slicer|position[24]                ; Package_slicer:slicer|position[32]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.795      ;
+; 0.530  ; buffer[8]                                         ; buffer[16]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.796      ;
+; 0.530  ; buffer[40]                                        ; buffer[48]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.796      ;
+; 0.531  ; Package_slicer:slicer|count[31]                   ; Package_slicer:slicer|count[31]                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.797      ;
+; 0.531  ; Package_slicer:slicer|position[57]                ; Package_slicer:slicer|position[60]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.797      ;
+; 0.532  ; Package_slicer:slicer|position[57]                ; Package_slicer:slicer|data_out[1]                 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.798      ;
+; 0.538  ; Package_slicer:slicer|position[32]                ; Package_slicer:slicer|position[40]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.804      ;
+; 0.541  ; Package_slicer:slicer|position[37]                ; Package_slicer:slicer|position[45]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.807      ;
+; 0.544  ; Package_slicer:slicer|count_FSM[0]                ; Package_slicer:slicer|count_FSM[3]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.810      ;
+; 0.545  ; Package_slicer:slicer|state.111                   ; Package_slicer:slicer|state.000                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.811      ;
+; 0.545  ; Package_slicer:slicer|state.000                   ; Package_slicer:slicer|state.001                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.811      ;
+; 0.545  ; Package_slicer:slicer|state.001                   ; Package_slicer:slicer|state.010                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.811      ;
+; 0.548  ; Package_slicer:slicer|count_FSM[0]                ; Package_slicer:slicer|count_FSM[2]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.814      ;
+; 0.549  ; Package_slicer:slicer|count_FSM[0]                ; Package_slicer:slicer|count_FSM[1]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.815      ;
+; 0.562  ; Package_slicer:slicer|busy                        ; Package_slicer:slicer|position[33]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.828      ;
+; 0.623  ; Package_slicer:slicer|position[41]                ; Package_slicer:slicer|position[49]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.889      ;
+; 0.630  ; Package_slicer:slicer|position[48]                ; Package_slicer:slicer|position[56]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.896      ;
+; 0.643  ; Package_slicer:slicer|position[58]                ; Package_slicer:slicer|data_out[2]                 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.909      ;
+; 0.654  ; suav:suaviza|shift_register_v:vec|bitShiftReg[7]  ; suav:suaviza|shift_register_v:vec|bitShiftReg[8]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.920      ;
+; 0.655  ; Package_slicer:slicer|position[53]                ; Package_slicer:slicer|position[61]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.921      ;
+; 0.658  ; suav:suaviza|shift_register_v:vec|bitShiftReg[1]  ; suav:suaviza|shift_register_v:vec|bitShiftReg[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.924      ;
+; 0.658  ; buffer[62]                                        ; buffer[70]                                        ; clock        ; clock       ; 0.000        ; 0.002      ; 0.926      ;
+; 0.660  ; suav:suaviza|shift_register_v:vec|bitShiftReg[9]  ; suav:suaviza|shift_register_v:vec|bitShiftReg[10] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.926      ;
+; 0.660  ; Package_slicer:slicer|state.010                   ; Package_slicer:slicer|data_out[0]                 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.926      ;
+; 0.663  ; suav:suaviza|shift_register_v:vec|bitShiftReg[5]  ; suav:suaviza|shift_register_v:vec|bitShiftReg[6]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.929      ;
+; 0.663  ; Package_slicer:slicer|state.010                   ; Package_slicer:slicer|state.111                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.929      ;
+; 0.664  ; buffer[3]                                         ; buffer[11]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.930      ;
+; 0.667  ; buffer[32]                                        ; buffer[40]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.933      ;
+; 0.668  ; buffer[0]                                         ; buffer[8]                                         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.934      ;
+; 0.670  ; buffer[48]                                        ; buffer[56]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.936      ;
+; 0.670  ; buffer[5]                                         ; buffer[13]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.936      ;
+; 0.675  ; buffer[44]                                        ; buffer[52]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.941      ;
+; 0.697  ; buffer[37]                                        ; buffer[45]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.963      ;
+; 0.699  ; suav:suaviza|shift_register_v:vec|bitShiftReg[17] ; suav:suaviza|shift_register_v:vec|bitShiftReg[18] ; clock        ; clock       ; 0.000        ; -0.002     ; 0.963      ;
+; 0.703  ; Package_slicer:slicer|position[45]                ; Package_slicer:slicer|position[53]                ; clock        ; clock       ; 0.000        ; 0.001      ; 0.970      ;
+; 0.706  ; buffer[39]                                        ; buffer[47]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.972      ;
+; 0.709  ; buffer[30]                                        ; buffer[38]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.975      ;
+; 0.710  ; buffer[63]                                        ; buffer[71]                                        ; clock        ; clock       ; 0.000        ; 0.001      ; 0.977      ;
+; 0.788  ; Package_slicer:slicer|position[63]                ; Package_slicer:slicer|data_out[7]                 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.054      ;
+; 0.794  ; Package_slicer:slicer|count[25]                   ; Package_slicer:slicer|count[25]                   ; clock        ; clock       ; 0.000        ; 0.000      ; 1.060      ;
+; 0.795  ; count[13]                                         ; count[13]                                         ; clock        ; clock       ; 0.000        ; 0.000      ; 1.061      ;
+; 0.795  ; Package_slicer:slicer|count[27]                   ; Package_slicer:slicer|count[27]                   ; clock        ; clock       ; 0.000        ; 0.000      ; 1.061      ;
+; 0.795  ; Package_slicer:slicer|position[26]                ; Package_slicer:slicer|position[34]                ; clock        ; clock       ; 0.000        ; 0.000      ; 1.061      ;
+; 0.799  ; Package_slicer:slicer|count[29]                   ; Package_slicer:slicer|count[29]                   ; clock        ; clock       ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799  ; Package_slicer:slicer|count[30]                   ; Package_slicer:slicer|count[30]                   ; clock        ; clock       ; 0.000        ; 0.000      ; 1.065      ;
+; 0.801  ; count[6]                                          ; count[6]                                          ; clock        ; clock       ; 0.000        ; 0.000      ; 1.067      ;
+; 0.802  ; count[0]                                          ; count[1]                                          ; clock        ; clock       ; 0.000        ; 0.000      ; 1.068      ;
+; 0.802  ; count[4]                                          ; count[4]                                          ; clock        ; clock       ; 0.000        ; 0.000      ; 1.068      ;
+; 0.802  ; count[8]                                          ; count[8]                                          ; clock        ; clock       ; 0.000        ; 0.000      ; 1.068      ;
+; 0.805  ; count[14]                                         ; count[14]                                         ; clock        ; clock       ; 0.000        ; 0.000      ; 1.071      ;
+; 0.805  ; Package_slicer:slicer|position[59]                ; Package_slicer:slicer|data_out[3]                 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.071      ;
+; 0.806  ; count[10]                                         ; count[10]                                         ; clock        ; clock       ; 0.000        ; 0.000      ; 1.072      ;
++--------+---------------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'count[25]'                                                                                    ;
++-------+-------------+---------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+---------------------+--------------+-------------+--------------+------------+------------+
+; 0.106 ; buffer[67]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.095      ;
+; 0.261 ; buffer[71]  ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.722      ; 1.249      ;
+; 0.263 ; buffer[66]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.727      ; 1.256      ;
+; 0.265 ; buffer[65]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.254      ;
+; 0.266 ; buffer[68]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.727      ; 1.259      ;
+; 0.274 ; buffer[70]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.721      ; 1.261      ;
+; 0.458 ; buffer[63]  ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.447      ;
+; 0.474 ; buffer[64]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.725      ; 1.465      ;
+; 0.487 ; buffer[69]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.721      ; 1.474      ;
+; 0.536 ; estado.0111 ; estado.1000         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.802      ;
+; 0.541 ; estado.0010 ; estado.0011         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.807      ;
+; 0.541 ; estado.0110 ; estado.0111         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.807      ;
+; 0.544 ; estado.0100 ; estado.0101         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.810      ;
+; 0.552 ; buffer[15]  ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.541      ;
+; 0.553 ; buffer[60]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.542      ;
+; 0.555 ; buffer[26]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.544      ;
+; 0.561 ; buffer[62]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.550      ;
+; 0.564 ; buffer[29]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.553      ;
+; 0.586 ; buffer[12]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.727      ; 1.579      ;
+; 0.589 ; buffer[25]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.724      ; 1.579      ;
+; 0.602 ; buffer[55]  ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.591      ;
+; 0.646 ; buffer[10]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.727      ; 1.639      ;
+; 0.681 ; estado.0000 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.947      ;
+; 0.682 ; estado.0000 ; estado.0001         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.948      ;
+; 0.685 ; buffer[7]   ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.674      ;
+; 0.689 ; estado.0001 ; estado.0010         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.955      ;
+; 0.691 ; estado.1000 ; estado.1001         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.957      ;
+; 0.729 ; buffer[31]  ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.718      ;
+; 0.732 ; buffer[50]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.721      ;
+; 0.733 ; buffer[41]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.724      ; 1.723      ;
+; 0.734 ; buffer[36]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.723      ;
+; 0.740 ; buffer[61]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.729      ;
+; 0.742 ; buffer[46]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.731      ;
+; 0.764 ; buffer[20]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.753      ;
+; 0.764 ; buffer[42]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.753      ;
+; 0.771 ; buffer[30]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.760      ;
+; 0.774 ; buffer[37]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.763      ;
+; 0.778 ; buffer[0]   ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.725      ; 1.769      ;
+; 0.855 ; estado.0000 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.004      ; 1.125      ;
+; 0.861 ; estado.1001 ; estado.0000         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 1.127      ;
+; 0.866 ; estado.0101 ; estado.0110         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 1.132      ;
+; 0.868 ; estado.0011 ; estado.0100         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 1.134      ;
+; 0.871 ; buffer[23]  ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.860      ;
+; 0.877 ; buffer[48]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.725      ; 1.868      ;
+; 0.886 ; buffer[8]   ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.725      ; 1.877      ;
+; 0.892 ; buffer[14]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.721      ; 1.879      ;
+; 0.906 ; buffer[51]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.724      ; 1.896      ;
+; 0.917 ; buffer[1]   ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.724      ; 1.907      ;
+; 0.942 ; buffer[5]   ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.721      ; 1.929      ;
+; 0.952 ; buffer[27]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.724      ; 1.942      ;
+; 0.959 ; buffer[39]  ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.948      ;
+; 0.968 ; buffer[3]   ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.957      ;
+; 0.974 ; buffer[52]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.963      ;
+; 0.975 ; buffer[21]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.964      ;
+; 0.978 ; buffer[54]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.967      ;
+; 1.003 ; buffer[18]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 1.992      ;
+; 1.010 ; buffer[56]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.725      ; 2.001      ;
+; 1.034 ; buffer[6]   ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.721      ; 2.021      ;
+; 1.053 ; buffer[2]   ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.727      ; 2.046      ;
+; 1.057 ; buffer[16]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.725      ; 2.048      ;
+; 1.079 ; buffer[13]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.721      ; 2.066      ;
+; 1.095 ; buffer[19]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.724      ; 2.085      ;
+; 1.095 ; estado.0000 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.005      ; 1.366      ;
+; 1.097 ; estado.0000 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.005      ; 1.368      ;
+; 1.098 ; buffer[47]  ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 2.087      ;
+; 1.112 ; buffer[11]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 2.101      ;
+; 1.138 ; estado.1001 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 1.404      ;
+; 1.141 ; buffer[49]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 2.130      ;
+; 1.143 ; buffer[58]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 2.132      ;
+; 1.155 ; buffer[17]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 2.144      ;
+; 1.157 ; buffer[53]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 2.146      ;
+; 1.167 ; buffer[57]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 2.156      ;
+; 1.174 ; buffer[4]   ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.727      ; 2.167      ;
+; 1.180 ; buffer[34]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 2.169      ;
+; 1.182 ; buffer[22]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 2.171      ;
+; 1.205 ; buffer[59]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 2.194      ;
+; 1.211 ; buffer[28]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 2.200      ;
+; 1.222 ; buffer[45]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 2.211      ;
+; 1.239 ; buffer[40]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.725      ; 2.230      ;
+; 1.331 ; buffer[24]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.725      ; 2.322      ;
+; 1.340 ; buffer[44]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 2.329      ;
+; 1.362 ; buffer[32]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.725      ; 2.353      ;
+; 1.372 ; buffer[38]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 2.361      ;
+; 1.373 ; buffer[35]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.730      ; 2.369      ;
+; 1.390 ; buffer[33]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 2.379      ;
+; 1.397 ; estado.1001 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.005      ; 1.668      ;
+; 1.397 ; estado.1001 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.005      ; 1.668      ;
+; 1.401 ; estado.1001 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.004      ; 1.671      ;
+; 1.406 ; buffer[43]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.730      ; 2.402      ;
+; 1.412 ; estado.0000 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.002      ; 1.680      ;
+; 1.416 ; estado.0000 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.002      ; 1.684      ;
+; 1.434 ; estado.0000 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.008      ; 1.708      ;
+; 1.435 ; estado.0000 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.008      ; 1.709      ;
+; 1.550 ; buffer[9]   ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.723      ; 2.539      ;
+; 1.612 ; estado.0111 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 1.878      ;
+; 1.658 ; estado.1000 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 1.924      ;
+; 1.663 ; estado.1001 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.008      ; 1.937      ;
+; 1.663 ; estado.1001 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.008      ; 1.937      ;
+; 1.665 ; estado.0110 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.005      ; 1.936      ;
+; 1.727 ; estado.1001 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.002      ; 1.995      ;
++-------+-------------+---------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock'                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|busy            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|busy            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count[25]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count[25]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count[26]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count[26]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count[27]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count[27]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count[28]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count[28]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count[29]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count[29]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count[30]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count[30]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count[31]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count[31]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_FSM[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_FSM[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_FSM[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_FSM[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_FSM[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_FSM[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_FSM[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_FSM[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[25] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[25] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[26] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[26] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[27] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[27] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[28] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[28] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[29] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[29] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[30] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[30] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[31] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[31] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|data_out[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|data_out[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|data_out[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|data_out[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|data_out[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|data_out[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|data_out[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|data_out[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|data_out[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|data_out[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|data_out[5]     ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'count[25]'                                                                     ;
++--------+--------------+----------------+------------------+-----------+------------+----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock     ; Clock Edge ; Target                     ;
++--------+--------------+----------------+------------------+-----------+------------+----------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[0]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[0]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[1]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[1]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[2]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[2]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[3]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[3]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[4]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[4]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[5]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[5]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[6]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[6]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[7]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[7]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0000                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0000                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0001                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0001                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0010                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0010                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0011                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0011                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0100                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0100                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0101                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0101                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0110                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0110                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0111                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0111                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.1000                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.1000                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.1001                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.1001                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; count[25]|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; count[25]|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; count[25]~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; count[25]~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; count[25]~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; count[25]~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[4]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[4]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[5]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[5]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[6]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[6]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[7]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[7]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0000|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0000|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0001|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0001|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0010|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0010|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0011|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0011|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0100|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0100|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0101|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0101|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0110|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0110|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0111|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0111|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.1000|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.1000|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.1001|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.1001|clk            ;
++--------+--------------+----------------+------------------+-----------+------------+----------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; child     ; clock      ; 4.996 ; 4.996 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; child     ; clock      ; -0.396 ; -0.396 ; Rise       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Clock to Output Times                                                         ;
++-----------------+------------+--------+--------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------+------------+--------+--------+------------+-----------------+
+; data_sliced[*]  ; count[25]  ; 10.264 ; 10.264 ; Rise       ; count[25]       ;
+;  data_sliced[0] ; count[25]  ; 9.427  ; 9.427  ; Rise       ; count[25]       ;
+;  data_sliced[1] ; count[25]  ; 10.264 ; 10.264 ; Rise       ; count[25]       ;
+;  data_sliced[2] ; count[25]  ; 9.718  ; 9.718  ; Rise       ; count[25]       ;
+;  data_sliced[3] ; count[25]  ; 9.073  ; 9.073  ; Rise       ; count[25]       ;
+;  data_sliced[4] ; count[25]  ; 8.667  ; 8.667  ; Rise       ; count[25]       ;
+;  data_sliced[5] ; count[25]  ; 9.441  ; 9.441  ; Rise       ; count[25]       ;
+;  data_sliced[6] ; count[25]  ; 8.904  ; 8.904  ; Rise       ; count[25]       ;
+;  data_sliced[7] ; count[25]  ; 9.067  ; 9.067  ; Rise       ; count[25]       ;
++-----------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                 ;
++-----------------+------------+--------+--------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------+------------+--------+--------+------------+-----------------+
+; data_sliced[*]  ; count[25]  ; 8.667  ; 8.667  ; Rise       ; count[25]       ;
+;  data_sliced[0] ; count[25]  ; 9.427  ; 9.427  ; Rise       ; count[25]       ;
+;  data_sliced[1] ; count[25]  ; 10.264 ; 10.264 ; Rise       ; count[25]       ;
+;  data_sliced[2] ; count[25]  ; 9.718  ; 9.718  ; Rise       ; count[25]       ;
+;  data_sliced[3] ; count[25]  ; 9.073  ; 9.073  ; Rise       ; count[25]       ;
+;  data_sliced[4] ; count[25]  ; 8.667  ; 8.667  ; Rise       ; count[25]       ;
+;  data_sliced[5] ; count[25]  ; 9.441  ; 9.441  ; Rise       ; count[25]       ;
+;  data_sliced[6] ; count[25]  ; 8.904  ; 8.904  ; Rise       ; count[25]       ;
+;  data_sliced[7] ; count[25]  ; 9.067  ; 9.067  ; Rise       ; count[25]       ;
++-----------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------+
+; Fast Model Setup Summary           ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; clock     ; -2.042 ; -156.665      ;
+; count[25] ; -0.212 ; -1.197        ;
++-----------+--------+---------------+
+
+
++------------------------------------+
+; Fast Model Hold Summary            ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; clock     ; -1.406 ; -1.406        ;
+; count[25] ; 0.053  ; 0.000         ;
++-----------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-----------+--------+-------------------+
+; Clock     ; Slack  ; End Point TNS     ;
++-----------+--------+-------------------+
+; clock     ; -1.380 ; -244.380          ;
+; count[25] ; -0.500 ; -18.000           ;
++-----------+--------+-------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock'                                                                                                                                                ;
++--------+---------------------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                         ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.042 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; -0.001     ; 3.073      ;
+; -1.970 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; -0.001     ; 3.001      ;
+; -1.904 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; -0.001     ; 2.935      ;
+; -1.856 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; -0.001     ; 2.887      ;
+; -1.817 ; suav:suaviza|t_Count[3]                           ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; -0.001     ; 2.848      ;
+; -1.786 ; suav:suaviza|t_Count[4]                           ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; -0.001     ; 2.817      ;
+; -1.748 ; suav:suaviza|t_Count[5]                           ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; -0.001     ; 2.779      ;
+; -1.713 ; suav:suaviza|t_Count[6]                           ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; -0.001     ; 2.744      ;
+; -1.703 ; suav:suaviza|t_Count[14]                          ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; -0.001     ; 2.734      ;
+; -1.660 ; suav:suaviza|t_Count[7]                           ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; -0.001     ; 2.691      ;
+; -1.568 ; suav:suaviza|t_Count[8]                           ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; -0.001     ; 2.599      ;
+; -1.549 ; suav:suaviza|t_Count[9]                           ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; -0.001     ; 2.580      ;
+; -1.543 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[13]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.575      ;
+; -1.514 ; suav:suaviza|t_Count[10]                          ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; -0.001     ; 2.545      ;
+; -1.471 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[13]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.503      ;
+; -1.464 ; suav:suaviza|t_Count[11]                          ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; -0.001     ; 2.495      ;
+; -1.455 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[31]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.484      ;
+; -1.445 ; suav:suaviza|t_Count[12]                          ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; -0.001     ; 2.476      ;
+; -1.420 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[30]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.449      ;
+; -1.405 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[13]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.437      ;
+; -1.394 ; suav:suaviza|t_Count[13]                          ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; -0.001     ; 2.425      ;
+; -1.391 ; suav:suaviza|t_Count[15]                          ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; -0.002     ; 2.421      ;
+; -1.385 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[29]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.414      ;
+; -1.383 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[31]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.412      ;
+; -1.373 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[18]              ; clock        ; clock       ; 1.000        ; -0.004     ; 2.401      ;
+; -1.365 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[14]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.397      ;
+; -1.357 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|t_Count[13]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.389      ;
+; -1.350 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[28]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.379      ;
+; -1.348 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[30]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.377      ;
+; -1.332 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[17]              ; clock        ; clock       ; 1.000        ; -0.004     ; 2.360      ;
+; -1.318 ; suav:suaviza|t_Count[3]                           ; suav:suaviza|t_Count[13]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.350      ;
+; -1.317 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[10]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.349      ;
+; -1.317 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[31]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.346      ;
+; -1.315 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[27]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.344      ;
+; -1.313 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[29]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.342      ;
+; -1.301 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[18]              ; clock        ; clock       ; 1.000        ; -0.004     ; 2.329      ;
+; -1.293 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[14]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.325      ;
+; -1.287 ; suav:suaviza|t_Count[4]                           ; suav:suaviza|t_Count[13]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.319      ;
+; -1.282 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[30]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.311      ;
+; -1.280 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[26]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.309      ;
+; -1.278 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[28]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.307      ;
+; -1.269 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|t_Count[31]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.298      ;
+; -1.260 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[17]              ; clock        ; clock       ; 1.000        ; -0.004     ; 2.288      ;
+; -1.247 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[29]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.276      ;
+; -1.245 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[25]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.274      ;
+; -1.245 ; suav:suaviza|t_Count[5]                           ; suav:suaviza|t_Count[13]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.277      ;
+; -1.245 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[10]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.277      ;
+; -1.243 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[27]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.272      ;
+; -1.235 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[18]              ; clock        ; clock       ; 1.000        ; -0.004     ; 2.263      ;
+; -1.234 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|t_Count[30]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.263      ;
+; -1.230 ; suav:suaviza|t_Count[3]                           ; suav:suaviza|t_Count[31]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.259      ;
+; -1.229 ; suav:suaviza|t_Count[16]                          ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; 0.003      ; 2.264      ;
+; -1.227 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[14]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.259      ;
+; -1.221 ; suav:suaviza|t_Count[19]                          ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; 0.002      ; 2.255      ;
+; -1.212 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[28]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.241      ;
+; -1.210 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[16]              ; clock        ; clock       ; 1.000        ; -0.004     ; 2.238      ;
+; -1.210 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[24]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.239      ;
+; -1.208 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[26]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.237      ;
+; -1.205 ; suav:suaviza|t_Count[6]                           ; suav:suaviza|t_Count[13]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.237      ;
+; -1.199 ; suav:suaviza|t_Count[4]                           ; suav:suaviza|t_Count[31]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.228      ;
+; -1.199 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|t_Count[29]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.228      ;
+; -1.195 ; suav:suaviza|t_Count[3]                           ; suav:suaviza|t_Count[30]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.224      ;
+; -1.194 ; suav:suaviza|t_Count[17]                          ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; 0.003      ; 2.229      ;
+; -1.194 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[17]              ; clock        ; clock       ; 1.000        ; -0.004     ; 2.222      ;
+; -1.187 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|t_Count[18]              ; clock        ; clock       ; 1.000        ; -0.004     ; 2.215      ;
+; -1.179 ; suav:suaviza|t_Count[20]                          ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; 0.002      ; 2.213      ;
+; -1.179 ; suav:suaviza|t_Count[27]                          ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; 0.002      ; 2.213      ;
+; -1.179 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|t_Count[14]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.211      ;
+; -1.179 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[10]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.211      ;
+; -1.177 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[27]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.206      ;
+; -1.173 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[25]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.202      ;
+; -1.164 ; suav:suaviza|t_Count[4]                           ; suav:suaviza|t_Count[30]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.193      ;
+; -1.164 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|t_Count[28]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.193      ;
+; -1.161 ; suav:suaviza|t_Count[5]                           ; suav:suaviza|t_Count[31]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.190      ;
+; -1.160 ; suav:suaviza|t_Count[18]                          ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; 0.003      ; 2.195      ;
+; -1.160 ; suav:suaviza|t_Count[3]                           ; suav:suaviza|t_Count[29]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.189      ;
+; -1.152 ; suav:suaviza|t_Count[7]                           ; suav:suaviza|t_Count[13]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.184      ;
+; -1.148 ; suav:suaviza|t_Count[3]                           ; suav:suaviza|t_Count[18]              ; clock        ; clock       ; 1.000        ; -0.004     ; 2.176      ;
+; -1.146 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|t_Count[17]              ; clock        ; clock       ; 1.000        ; -0.004     ; 2.174      ;
+; -1.142 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[26]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.171      ;
+; -1.141 ; suav:suaviza|t_Count[21]                          ; suav:suaviza|out                      ; clock        ; clock       ; 1.000        ; 0.002      ; 2.175      ;
+; -1.140 ; suav:suaviza|t_Count[3]                           ; suav:suaviza|t_Count[14]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.172      ;
+; -1.138 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[16]              ; clock        ; clock       ; 1.000        ; -0.004     ; 2.166      ;
+; -1.138 ; suav:suaviza|t_Count[1]                           ; suav:suaviza|t_Count[24]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.167      ;
+; -1.131 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|t_Count[10]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.163      ;
+; -1.130 ; Package_slicer:slicer|count_delay[0]              ; Package_slicer:slicer|count_delay[30] ; clock        ; clock       ; 1.000        ; -0.003     ; 2.159      ;
+; -1.129 ; suav:suaviza|t_Count[4]                           ; suav:suaviza|t_Count[29]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.158      ;
+; -1.129 ; suav:suaviza|t_Count[2]                           ; suav:suaviza|t_Count[27]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.158      ;
+; -1.127 ; Package_slicer:slicer|count_delay[0]              ; Package_slicer:slicer|count_delay[29] ; clock        ; clock       ; 1.000        ; -0.003     ; 2.156      ;
+; -1.126 ; suav:suaviza|t_Count[6]                           ; suav:suaviza|t_Count[31]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.155      ;
+; -1.126 ; suav:suaviza|t_Count[5]                           ; suav:suaviza|t_Count[30]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.155      ;
+; -1.125 ; suav:suaviza|t_Count[3]                           ; suav:suaviza|t_Count[28]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.154      ;
+; -1.117 ; suav:suaviza|t_Count[4]                           ; suav:suaviza|t_Count[18]              ; clock        ; clock       ; 1.000        ; -0.004     ; 2.145      ;
+; -1.116 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[23]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.145      ;
+; -1.116 ; suav:suaviza|t_Count[14]                          ; suav:suaviza|t_Count[31]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.145      ;
+; -1.109 ; suav:suaviza|shift_register_v:vec|bitShiftReg[20] ; suav:suaviza|t_Count[12]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.141      ;
+; -1.109 ; suav:suaviza|t_Count[4]                           ; suav:suaviza|t_Count[14]              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.141      ;
+; -1.107 ; suav:suaviza|t_Count[3]                           ; suav:suaviza|t_Count[17]              ; clock        ; clock       ; 1.000        ; -0.004     ; 2.135      ;
+; -1.107 ; suav:suaviza|t_Count[0]                           ; suav:suaviza|t_Count[25]              ; clock        ; clock       ; 1.000        ; -0.003     ; 2.136      ;
+; -1.100 ; Package_slicer:slicer|count_delay[0]              ; Package_slicer:slicer|count_delay[26] ; clock        ; clock       ; 1.000        ; -0.003     ; 2.129      ;
++--------+---------------------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'count[25]'                                                                                    ;
++--------+-------------+---------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node   ; To Node             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------+---------------------+--------------+-------------+--------------+------------+------------+
+; -0.212 ; estado.0010 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 1.247      ;
+; -0.187 ; estado.0100 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.221      ;
+; -0.174 ; estado.0101 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.208      ;
+; -0.172 ; estado.0100 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.206      ;
+; -0.166 ; estado.0100 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 1.203      ;
+; -0.166 ; estado.0001 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.200      ;
+; -0.157 ; estado.0100 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 1.194      ;
+; -0.156 ; estado.0010 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 1.193      ;
+; -0.147 ; estado.0110 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 1.184      ;
+; -0.146 ; estado.0101 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 1.183      ;
+; -0.142 ; estado.0011 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 1.179      ;
+; -0.139 ; estado.0101 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 1.174      ;
+; -0.134 ; estado.0011 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 1.171      ;
+; -0.132 ; estado.0010 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 1.167      ;
+; -0.128 ; estado.0100 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.162      ;
+; -0.124 ; estado.0011 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.158      ;
+; -0.119 ; estado.0110 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 1.154      ;
+; -0.103 ; estado.0111 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 1.138      ;
+; -0.102 ; estado.0001 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 1.137      ;
+; -0.095 ; estado.0111 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 1.130      ;
+; -0.093 ; estado.0001 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.127      ;
+; -0.092 ; estado.0101 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.126      ;
+; -0.085 ; estado.0010 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 1.122      ;
+; -0.074 ; estado.0101 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 1.111      ;
+; -0.069 ; estado.0110 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 1.106      ;
+; -0.061 ; estado.0011 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 1.096      ;
+; -0.058 ; estado.0111 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.092      ;
+; -0.054 ; estado.0110 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.088      ;
+; -0.053 ; estado.0011 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.087      ;
+; -0.041 ; estado.0110 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.000      ; 1.073      ;
+; -0.041 ; estado.0011 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.075      ;
+; -0.038 ; estado.0101 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.072      ;
+; -0.033 ; estado.0100 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 1.068      ;
+; -0.031 ; estado.0010 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.065      ;
+; -0.031 ; estado.0001 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 1.068      ;
+; -0.029 ; estado.0110 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.063      ;
+; -0.028 ; estado.0011 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.000      ; 1.060      ;
+; -0.023 ; estado.0111 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.057      ;
+; -0.023 ; estado.0100 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.000      ; 1.055      ;
+; -0.019 ; estado.0010 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.053      ;
+; -0.015 ; estado.1000 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.049      ;
+; -0.008 ; estado.0100 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 1.043      ;
+; -0.007 ; estado.1000 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 1.044      ;
+; -0.006 ; estado.1000 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.040      ;
+; -0.005 ; estado.0111 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 1.042      ;
+; -0.004 ; estado.0111 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.038      ;
+; 0.004  ; estado.0001 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 1.031      ;
+; 0.006  ; estado.1001 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.028      ;
+; 0.006  ; estado.1001 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.028      ;
+; 0.010  ; estado.1000 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 1.025      ;
+; 0.011  ; estado.1000 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 1.024      ;
+; 0.012  ; estado.0101 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 1.023      ;
+; 0.014  ; estado.0111 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 1.023      ;
+; 0.015  ; estado.1000 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 1.022      ;
+; 0.028  ; estado.0110 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 1.006      ;
+; 0.039  ; estado.0001 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 0.998      ;
+; 0.041  ; estado.1001 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 0.996      ;
+; 0.041  ; estado.1001 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 0.996      ;
+; 0.041  ; estado.0010 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 0.993      ;
+; 0.045  ; estado.0001 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.000      ; 0.987      ;
+; 0.050  ; estado.1000 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 0.984      ;
+; 0.051  ; estado.0101 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.000      ; 0.981      ;
+; 0.092  ; estado.0001 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 0.942      ;
+; 0.098  ; estado.0011 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 0.937      ;
+; 0.121  ; estado.0010 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.000      ; 0.911      ;
+; 0.147  ; estado.0110 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 0.888      ;
+; 0.155  ; estado.1001 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 0.879      ;
+; 0.157  ; estado.1001 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 0.878      ;
+; 0.157  ; estado.1001 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 0.878      ;
+; 0.158  ; estado.1000 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.000      ; 0.874      ;
+; 0.174  ; estado.0111 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.000      ; 0.858      ;
+; 0.205  ; buffer[9]   ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.316      ; 1.143      ;
+; 0.231  ; estado.0000 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 0.806      ;
+; 0.231  ; estado.0000 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.005      ; 0.806      ;
+; 0.246  ; estado.0000 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 0.788      ;
+; 0.250  ; estado.0000 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.002      ; 0.784      ;
+; 0.266  ; buffer[43]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.320      ; 1.086      ;
+; 0.269  ; buffer[33]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.316      ; 1.079      ;
+; 0.274  ; buffer[35]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.320      ; 1.078      ;
+; 0.274  ; estado.1001 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.000      ; 0.758      ;
+; 0.285  ; buffer[38]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.316      ; 1.063      ;
+; 0.293  ; buffer[32]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.317      ; 1.056      ;
+; 0.298  ; buffer[44]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.316      ; 1.050      ;
+; 0.303  ; buffer[24]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.317      ; 1.046      ;
+; 0.338  ; buffer[40]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.317      ; 1.011      ;
+; 0.351  ; buffer[59]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.316      ; 0.997      ;
+; 0.355  ; buffer[45]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.316      ; 0.993      ;
+; 0.364  ; buffer[17]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.316      ; 0.984      ;
+; 0.367  ; buffer[4]   ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.317      ; 0.982      ;
+; 0.369  ; buffer[28]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.316      ; 0.979      ;
+; 0.372  ; buffer[22]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.316      ; 0.976      ;
+; 0.377  ; buffer[53]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.316      ; 0.971      ;
+; 0.379  ; buffer[34]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.316      ; 0.969      ;
+; 0.379  ; buffer[57]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.316      ; 0.969      ;
+; 0.387  ; buffer[49]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.316      ; 0.961      ;
+; 0.388  ; buffer[58]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.316      ; 0.960      ;
+; 0.388  ; estado.0000 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 0.647      ;
+; 0.390  ; estado.0000 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 1.000        ; 0.003      ; 0.645      ;
+; 0.399  ; buffer[11]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.316      ; 0.949      ;
+; 0.406  ; buffer[47]  ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 1.000        ; 0.316      ; 0.942      ;
++--------+-------------+---------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clock'                                                                                                                                                             ;
++--------+---------------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                         ; To Node                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.406 ; count[25]                                         ; count[25]                                         ; count[25]    ; clock       ; 0.000        ; 1.637      ; 0.524      ;
+; -0.906 ; count[25]                                         ; count[25]                                         ; count[25]    ; clock       ; -0.500       ; 1.637      ; 0.524      ;
+; 0.215  ; count[0]                                          ; count[0]                                          ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Package_slicer:slicer|count_FSM[0]                ; Package_slicer:slicer|count_FSM[0]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Package_slicer:slicer|count_FSM[1]                ; Package_slicer:slicer|count_FSM[1]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Package_slicer:slicer|count_FSM[2]                ; Package_slicer:slicer|count_FSM[2]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Package_slicer:slicer|count_FSM[3]                ; Package_slicer:slicer|count_FSM[3]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Package_slicer:slicer|state.010                   ; Package_slicer:slicer|state.010                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Package_slicer:slicer|busy                        ; Package_slicer:slicer|busy                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Package_slicer:slicer|position[47]                ; Package_slicer:slicer|position[47]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Package_slicer:slicer|position[55]                ; Package_slicer:slicer|position[55]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Package_slicer:slicer|position[63]                ; Package_slicer:slicer|position[63]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; state                                             ; state                                             ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Package_slicer:slicer|position[57]                ; Package_slicer:slicer|position[57]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Package_slicer:slicer|position[32]                ; Package_slicer:slicer|position[32]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Package_slicer:slicer|position[26]                ; Package_slicer:slicer|position[26]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Package_slicer:slicer|position[34]                ; Package_slicer:slicer|position[34]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Package_slicer:slicer|position[58]                ; Package_slicer:slicer|position[58]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Package_slicer:slicer|position[51]                ; Package_slicer:slicer|position[51]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Package_slicer:slicer|position[59]                ; Package_slicer:slicer|position[59]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Package_slicer:slicer|position[60]                ; Package_slicer:slicer|position[60]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Package_slicer:slicer|position[45]                ; Package_slicer:slicer|position[45]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.238  ; Package_slicer:slicer|count_delay[31]             ; Package_slicer:slicer|count_delay[31]             ; clock        ; clock       ; 0.000        ; 0.000      ; 0.390      ;
+; 0.239  ; suav:suaviza|shift_register_v:vec|bitShiftReg[15] ; suav:suaviza|shift_register_v:vec|bitShiftReg[16] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239  ; buffer[24]                                        ; buffer[32]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.391      ;
+; 0.240  ; suav:suaviza|shift_register_v:vec|bitShiftReg[6]  ; suav:suaviza|shift_register_v:vec|bitShiftReg[7]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.392      ;
+; 0.240  ; Package_slicer:slicer|position[34]                ; Package_slicer:slicer|position[42]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.392      ;
+; 0.240  ; Package_slicer:slicer|position[54]                ; Package_slicer:slicer|position[62]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.392      ;
+; 0.241  ; suav:suaviza|shift_register_v:vec|bitShiftReg[10] ; suav:suaviza|shift_register_v:vec|bitShiftReg[11] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.393      ;
+; 0.241  ; suav:suaviza|shift_register_v:vec|bitShiftReg[11] ; suav:suaviza|shift_register_v:vec|bitShiftReg[12] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.393      ;
+; 0.241  ; suav:suaviza|shift_register_v:vec|bitShiftReg[12] ; suav:suaviza|shift_register_v:vec|bitShiftReg[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.393      ;
+; 0.241  ; suav:suaviza|shift_register_v:vec|bitShiftReg[16] ; suav:suaviza|shift_register_v:vec|bitShiftReg[17] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.393      ;
+; 0.241  ; Package_slicer:slicer|position[35]                ; Package_slicer:slicer|position[43]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.393      ;
+; 0.241  ; Package_slicer:slicer|position[46]                ; Package_slicer:slicer|position[54]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.393      ;
+; 0.241  ; buffer[59]                                        ; buffer[67]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.393      ;
+; 0.242  ; suav:suaviza|shift_register_v:vec|bitShiftReg[13] ; suav:suaviza|shift_register_v:vec|bitShiftReg[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.394      ;
+; 0.242  ; buffer[49]                                        ; buffer[57]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.394      ;
+; 0.243  ; Package_slicer:slicer|count[31]                   ; Package_slicer:slicer|count[31]                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243  ; Package_slicer:slicer|position[40]                ; Package_slicer:slicer|position[48]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243  ; Package_slicer:slicer|position[42]                ; Package_slicer:slicer|position[50]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243  ; buffer[8]                                         ; buffer[16]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243  ; buffer[16]                                        ; buffer[24]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243  ; buffer[56]                                        ; buffer[64]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.395      ;
+; 0.244  ; suav:suaviza|shift_register_v:vec|bitShiftReg[4]  ; suav:suaviza|shift_register_v:vec|bitShiftReg[5]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.396      ;
+; 0.244  ; suav:suaviza|shift_register_v:vec|bitShiftReg[14] ; suav:suaviza|shift_register_v:vec|bitShiftReg[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.396      ;
+; 0.244  ; buffer[40]                                        ; buffer[48]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.396      ;
+; 0.245  ; suav:suaviza|shift_register_v:vec|bitShiftReg[8]  ; suav:suaviza|shift_register_v:vec|bitShiftReg[9]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.397      ;
+; 0.245  ; Package_slicer:slicer|position[60]                ; Package_slicer:slicer|data_out[4]                 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.397      ;
+; 0.245  ; Package_slicer:slicer|position[24]                ; Package_slicer:slicer|position[37]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.397      ;
+; 0.245  ; buffer[45]                                        ; buffer[53]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.397      ;
+; 0.245  ; Package_slicer:slicer|position[24]                ; Package_slicer:slicer|position[32]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.397      ;
+; 0.245  ; Package_slicer:slicer|position[57]                ; Package_slicer:slicer|position[60]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.397      ;
+; 0.246  ; Package_slicer:slicer|position[57]                ; Package_slicer:slicer|data_out[1]                 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.398      ;
+; 0.246  ; buffer[47]                                        ; buffer[55]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.398      ;
+; 0.250  ; Package_slicer:slicer|position[32]                ; Package_slicer:slicer|position[40]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.402      ;
+; 0.252  ; Package_slicer:slicer|position[37]                ; Package_slicer:slicer|position[45]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.404      ;
+; 0.254  ; Package_slicer:slicer|count_FSM[0]                ; Package_slicer:slicer|count_FSM[3]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.406      ;
+; 0.255  ; Package_slicer:slicer|state.001                   ; Package_slicer:slicer|state.010                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.407      ;
+; 0.257  ; Package_slicer:slicer|count_FSM[0]                ; Package_slicer:slicer|count_FSM[1]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.409      ;
+; 0.257  ; Package_slicer:slicer|count_FSM[0]                ; Package_slicer:slicer|count_FSM[2]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.409      ;
+; 0.263  ; Package_slicer:slicer|busy                        ; Package_slicer:slicer|position[33]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.415      ;
+; 0.273  ; Package_slicer:slicer|state.111                   ; Package_slicer:slicer|state.000                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.425      ;
+; 0.273  ; Package_slicer:slicer|state.000                   ; Package_slicer:slicer|state.001                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.425      ;
+; 0.287  ; Package_slicer:slicer|position[58]                ; Package_slicer:slicer|data_out[2]                 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.439      ;
+; 0.289  ; Package_slicer:slicer|position[41]                ; Package_slicer:slicer|position[49]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.441      ;
+; 0.294  ; Package_slicer:slicer|position[48]                ; Package_slicer:slicer|position[56]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.446      ;
+; 0.294  ; Package_slicer:slicer|state.010                   ; Package_slicer:slicer|data_out[0]                 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.446      ;
+; 0.308  ; buffer[62]                                        ; buffer[70]                                        ; clock        ; clock       ; 0.000        ; 0.002      ; 0.462      ;
+; 0.317  ; Package_slicer:slicer|position[53]                ; Package_slicer:slicer|position[61]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.469      ;
+; 0.318  ; buffer[37]                                        ; buffer[45]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.470      ;
+; 0.319  ; suav:suaviza|shift_register_v:vec|bitShiftReg[17] ; suav:suaviza|shift_register_v:vec|bitShiftReg[18] ; clock        ; clock       ; 0.000        ; -0.001     ; 0.470      ;
+; 0.319  ; Package_slicer:slicer|state.010                   ; Package_slicer:slicer|state.111                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.471      ;
+; 0.319  ; Package_slicer:slicer|position[45]                ; Package_slicer:slicer|position[53]                ; clock        ; clock       ; 0.000        ; 0.002      ; 0.473      ;
+; 0.323  ; suav:suaviza|shift_register_v:vec|bitShiftReg[7]  ; suav:suaviza|shift_register_v:vec|bitShiftReg[8]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.475      ;
+; 0.324  ; suav:suaviza|shift_register_v:vec|bitShiftReg[1]  ; suav:suaviza|shift_register_v:vec|bitShiftReg[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.476      ;
+; 0.325  ; suav:suaviza|shift_register_v:vec|bitShiftReg[9]  ; suav:suaviza|shift_register_v:vec|bitShiftReg[10] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.477      ;
+; 0.325  ; buffer[3]                                         ; buffer[11]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.477      ;
+; 0.325  ; buffer[30]                                        ; buffer[38]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.477      ;
+; 0.325  ; buffer[39]                                        ; buffer[47]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.477      ;
+; 0.326  ; buffer[63]                                        ; buffer[71]                                        ; clock        ; clock       ; 0.000        ; 0.001      ; 0.479      ;
+; 0.327  ; buffer[0]                                         ; buffer[8]                                         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.479      ;
+; 0.327  ; buffer[32]                                        ; buffer[40]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.479      ;
+; 0.329  ; suav:suaviza|shift_register_v:vec|bitShiftReg[5]  ; suav:suaviza|shift_register_v:vec|bitShiftReg[6]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.481      ;
+; 0.331  ; buffer[48]                                        ; buffer[56]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.483      ;
+; 0.334  ; buffer[44]                                        ; buffer[52]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.486      ;
+; 0.334  ; buffer[5]                                         ; buffer[13]                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.486      ;
+; 0.354  ; Package_slicer:slicer|position[63]                ; Package_slicer:slicer|data_out[7]                 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.506      ;
+; 0.355  ; count[13]                                         ; count[13]                                         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.507      ;
+; 0.356  ; Package_slicer:slicer|count[25]                   ; Package_slicer:slicer|count[25]                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.508      ;
+; 0.356  ; Package_slicer:slicer|count[27]                   ; Package_slicer:slicer|count[27]                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.508      ;
+; 0.357  ; Package_slicer:slicer|position[26]                ; Package_slicer:slicer|position[34]                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358  ; count[4]                                          ; count[4]                                          ; clock        ; clock       ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358  ; count[6]                                          ; count[6]                                          ; clock        ; clock       ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358  ; count[8]                                          ; count[8]                                          ; clock        ; clock       ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359  ; count[14]                                         ; count[14]                                         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359  ; Package_slicer:slicer|count[29]                   ; Package_slicer:slicer|count[29]                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359  ; Package_slicer:slicer|count[30]                   ; Package_slicer:slicer|count[30]                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.360  ; count[15]                                         ; count[15]                                         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360  ; count[22]                                         ; count[22]                                         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360  ; count[24]                                         ; count[24]                                         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
++--------+---------------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'count[25]'                                                                                    ;
++-------+-------------+---------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+---------------------+--------------+-------------+--------------+------------+------------+
+; 0.053 ; buffer[67]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.521      ;
+; 0.127 ; buffer[71]  ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.315      ; 0.594      ;
+; 0.128 ; buffer[66]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 0.597      ;
+; 0.129 ; buffer[65]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.597      ;
+; 0.131 ; buffer[68]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 0.600      ;
+; 0.134 ; buffer[70]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.314      ; 0.600      ;
+; 0.218 ; buffer[64]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 0.687      ;
+; 0.223 ; buffer[69]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.314      ; 0.689      ;
+; 0.229 ; buffer[63]  ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.697      ;
+; 0.246 ; estado.0111 ; estado.1000         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.398      ;
+; 0.248 ; estado.0010 ; estado.0011         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.400      ;
+; 0.248 ; estado.0110 ; estado.0111         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.400      ;
+; 0.251 ; estado.0100 ; estado.0101         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.403      ;
+; 0.261 ; buffer[55]  ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.729      ;
+; 0.274 ; buffer[60]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.742      ;
+; 0.275 ; buffer[15]  ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.743      ;
+; 0.276 ; buffer[26]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.744      ;
+; 0.279 ; buffer[62]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.747      ;
+; 0.283 ; buffer[29]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.751      ;
+; 0.291 ; buffer[25]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 0.760      ;
+; 0.291 ; buffer[12]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 0.760      ;
+; 0.299 ; buffer[7]   ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.767      ;
+; 0.303 ; estado.0000 ; estado.0001         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.455      ;
+; 0.307 ; estado.0000 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.459      ;
+; 0.310 ; buffer[10]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 0.779      ;
+; 0.339 ; buffer[0]   ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 0.808      ;
+; 0.340 ; estado.0001 ; estado.0010         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.492      ;
+; 0.340 ; estado.1000 ; estado.1001         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.492      ;
+; 0.344 ; buffer[31]  ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.812      ;
+; 0.345 ; buffer[50]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.813      ;
+; 0.346 ; buffer[36]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.814      ;
+; 0.351 ; buffer[41]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 0.820      ;
+; 0.352 ; buffer[46]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.820      ;
+; 0.352 ; buffer[61]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.820      ;
+; 0.354 ; buffer[20]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.822      ;
+; 0.355 ; buffer[42]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.823      ;
+; 0.361 ; buffer[30]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.829      ;
+; 0.364 ; buffer[37]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.832      ;
+; 0.373 ; buffer[23]  ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.841      ;
+; 0.380 ; estado.0000 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.002      ; 0.534      ;
+; 0.385 ; buffer[48]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 0.854      ;
+; 0.386 ; estado.1001 ; estado.0000         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.538      ;
+; 0.388 ; buffer[8]   ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 0.857      ;
+; 0.391 ; buffer[14]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.314      ; 0.857      ;
+; 0.411 ; buffer[5]   ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.314      ; 0.877      ;
+; 0.419 ; estado.0011 ; estado.0100         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.571      ;
+; 0.420 ; estado.0101 ; estado.0110         ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.572      ;
+; 0.421 ; buffer[51]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 0.890      ;
+; 0.421 ; buffer[3]   ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.889      ;
+; 0.424 ; buffer[52]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.892      ;
+; 0.430 ; buffer[54]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.898      ;
+; 0.430 ; buffer[21]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.898      ;
+; 0.431 ; buffer[1]   ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 0.900      ;
+; 0.434 ; buffer[18]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.902      ;
+; 0.437 ; buffer[56]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 0.906      ;
+; 0.440 ; buffer[27]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 0.909      ;
+; 0.444 ; buffer[39]  ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.912      ;
+; 0.452 ; buffer[2]   ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 0.921      ;
+; 0.456 ; buffer[16]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 0.925      ;
+; 0.456 ; buffer[6]   ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.314      ; 0.922      ;
+; 0.472 ; buffer[19]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 0.941      ;
+; 0.474 ; buffer[13]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.314      ; 0.940      ;
+; 0.474 ; buffer[47]  ; data_sliced[7]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.942      ;
+; 0.481 ; buffer[11]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.949      ;
+; 0.490 ; estado.0000 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.003      ; 0.645      ;
+; 0.492 ; buffer[58]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.960      ;
+; 0.492 ; estado.0000 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.003      ; 0.647      ;
+; 0.493 ; buffer[49]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.961      ;
+; 0.501 ; buffer[34]  ; data_sliced[2]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.969      ;
+; 0.501 ; buffer[57]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.969      ;
+; 0.503 ; buffer[53]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.971      ;
+; 0.508 ; buffer[22]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.976      ;
+; 0.511 ; buffer[28]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.979      ;
+; 0.513 ; buffer[4]   ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 0.982      ;
+; 0.516 ; buffer[17]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.984      ;
+; 0.525 ; buffer[45]  ; data_sliced[5]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.993      ;
+; 0.529 ; buffer[59]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 0.997      ;
+; 0.542 ; buffer[40]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 1.011      ;
+; 0.577 ; buffer[24]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 1.046      ;
+; 0.582 ; buffer[44]  ; data_sliced[4]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 1.050      ;
+; 0.587 ; buffer[32]  ; data_sliced[0]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.317      ; 1.056      ;
+; 0.595 ; buffer[38]  ; data_sliced[6]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 1.063      ;
+; 0.606 ; buffer[35]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.320      ; 1.078      ;
+; 0.606 ; estado.1001 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.758      ;
+; 0.611 ; buffer[33]  ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 1.079      ;
+; 0.614 ; buffer[43]  ; data_sliced[3]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.320      ; 1.086      ;
+; 0.630 ; estado.0000 ; data_sliced[6]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.002      ; 0.784      ;
+; 0.634 ; estado.0000 ; data_sliced[5]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.002      ; 0.788      ;
+; 0.649 ; estado.0000 ; data_sliced[2]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.005      ; 0.806      ;
+; 0.649 ; estado.0000 ; data_sliced[4]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.005      ; 0.806      ;
+; 0.675 ; buffer[9]   ; data_sliced[1]~reg0 ; clock        ; count[25]   ; 0.000        ; 0.316      ; 1.143      ;
+; 0.706 ; estado.0111 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.858      ;
+; 0.722 ; estado.1000 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.874      ;
+; 0.723 ; estado.1001 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.003      ; 0.878      ;
+; 0.723 ; estado.1001 ; data_sliced[3]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.003      ; 0.878      ;
+; 0.725 ; estado.1001 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.002      ; 0.879      ;
+; 0.733 ; estado.0110 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.003      ; 0.888      ;
+; 0.759 ; estado.0010 ; data_sliced[0]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.000      ; 0.911      ;
+; 0.782 ; estado.0011 ; data_sliced[1]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.003      ; 0.937      ;
+; 0.788 ; estado.0001 ; data_sliced[7]~reg0 ; count[25]    ; count[25]   ; 0.000        ; 0.002      ; 0.942      ;
++-------+-------------+---------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock'                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|busy            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|busy            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count[25]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count[25]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count[26]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count[26]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count[27]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count[27]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count[28]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count[28]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count[29]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count[29]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count[30]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count[30]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count[31]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count[31]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_FSM[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_FSM[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_FSM[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_FSM[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_FSM[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_FSM[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_FSM[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_FSM[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[25] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[25] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[26] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[26] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[27] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[27] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[28] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[28] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[29] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[29] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[30] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[30] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[31] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[31] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|count_delay[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|count_delay[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|data_out[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|data_out[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|data_out[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|data_out[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|data_out[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|data_out[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|data_out[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|data_out[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|data_out[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Package_slicer:slicer|data_out[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Package_slicer:slicer|data_out[5]     ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'count[25]'                                                                     ;
++--------+--------------+----------------+------------------+-----------+------------+----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock     ; Clock Edge ; Target                     ;
++--------+--------------+----------------+------------------+-----------+------------+----------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[0]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[0]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[1]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[1]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[2]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[2]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[3]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[3]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[4]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[4]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[5]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[5]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[6]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[6]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[7]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[7]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0000                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0000                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0001                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0001                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0010                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0010                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0011                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0011                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0100                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0100                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0101                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0101                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0110                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0110                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0111                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0111                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.1000                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.1000                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; count[25] ; Rise       ; estado.1001                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.1001                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; count[25]|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; count[25]|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; count[25]~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; count[25]~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; count[25]~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; count[25]~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[4]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[4]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[5]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[5]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[6]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[6]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; data_sliced[7]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; data_sliced[7]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0000|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0000|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0001|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0001|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0010|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0010|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0011|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0011|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0100|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0100|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0101|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0101|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0110|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0110|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.0111|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.0111|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.1000|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.1000|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; count[25] ; Rise       ; estado.1001|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; count[25] ; Rise       ; estado.1001|clk            ;
++--------+--------------+----------------+------------------+-----------+------------+----------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; child     ; clock      ; 2.065 ; 2.065 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; child     ; clock      ; 0.032 ; 0.032 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; data_sliced[*]  ; count[25]  ; 5.457 ; 5.457 ; Rise       ; count[25]       ;
+;  data_sliced[0] ; count[25]  ; 5.147 ; 5.147 ; Rise       ; count[25]       ;
+;  data_sliced[1] ; count[25]  ; 5.457 ; 5.457 ; Rise       ; count[25]       ;
+;  data_sliced[2] ; count[25]  ; 5.274 ; 5.274 ; Rise       ; count[25]       ;
+;  data_sliced[3] ; count[25]  ; 4.967 ; 4.967 ; Rise       ; count[25]       ;
+;  data_sliced[4] ; count[25]  ; 4.796 ; 4.796 ; Rise       ; count[25]       ;
+;  data_sliced[5] ; count[25]  ; 5.139 ; 5.139 ; Rise       ; count[25]       ;
+;  data_sliced[6] ; count[25]  ; 4.902 ; 4.902 ; Rise       ; count[25]       ;
+;  data_sliced[7] ; count[25]  ; 4.961 ; 4.961 ; Rise       ; count[25]       ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                               ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; data_sliced[*]  ; count[25]  ; 4.796 ; 4.796 ; Rise       ; count[25]       ;
+;  data_sliced[0] ; count[25]  ; 5.147 ; 5.147 ; Rise       ; count[25]       ;
+;  data_sliced[1] ; count[25]  ; 5.457 ; 5.457 ; Rise       ; count[25]       ;
+;  data_sliced[2] ; count[25]  ; 5.274 ; 5.274 ; Rise       ; count[25]       ;
+;  data_sliced[3] ; count[25]  ; 4.967 ; 4.967 ; Rise       ; count[25]       ;
+;  data_sliced[4] ; count[25]  ; 4.796 ; 4.796 ; Rise       ; count[25]       ;
+;  data_sliced[5] ; count[25]  ; 5.139 ; 5.139 ; Rise       ; count[25]       ;
+;  data_sliced[6] ; count[25]  ; 4.902 ; 4.902 ; Rise       ; count[25]       ;
+;  data_sliced[7] ; count[25]  ; 4.961 ; 4.961 ; Rise       ; count[25]       ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+----------+--------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -5.739   ; -2.070 ; N/A      ; N/A     ; -1.380              ;
+;  clock           ; -5.739   ; -2.070 ; N/A      ; N/A     ; -1.380              ;
+;  count[25]       ; -1.743   ; 0.053  ; N/A      ; N/A     ; -0.500              ;
+; Design-wide TNS  ; -597.036 ; -2.07  ; 0.0      ; 0.0     ; -262.38             ;
+;  clock           ; -583.950 ; -2.070 ; N/A      ; N/A     ; -244.380            ;
+;  count[25]       ; -13.086  ; 0.000  ; N/A      ; N/A     ; -18.000             ;
++------------------+----------+--------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; child     ; clock      ; 4.996 ; 4.996 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; child     ; clock      ; 0.032 ; 0.032 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Clock to Output Times                                                         ;
++-----------------+------------+--------+--------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------+------------+--------+--------+------------+-----------------+
+; data_sliced[*]  ; count[25]  ; 10.264 ; 10.264 ; Rise       ; count[25]       ;
+;  data_sliced[0] ; count[25]  ; 9.427  ; 9.427  ; Rise       ; count[25]       ;
+;  data_sliced[1] ; count[25]  ; 10.264 ; 10.264 ; Rise       ; count[25]       ;
+;  data_sliced[2] ; count[25]  ; 9.718  ; 9.718  ; Rise       ; count[25]       ;
+;  data_sliced[3] ; count[25]  ; 9.073  ; 9.073  ; Rise       ; count[25]       ;
+;  data_sliced[4] ; count[25]  ; 8.667  ; 8.667  ; Rise       ; count[25]       ;
+;  data_sliced[5] ; count[25]  ; 9.441  ; 9.441  ; Rise       ; count[25]       ;
+;  data_sliced[6] ; count[25]  ; 8.904  ; 8.904  ; Rise       ; count[25]       ;
+;  data_sliced[7] ; count[25]  ; 9.067  ; 9.067  ; Rise       ; count[25]       ;
++-----------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                               ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; data_sliced[*]  ; count[25]  ; 4.796 ; 4.796 ; Rise       ; count[25]       ;
+;  data_sliced[0] ; count[25]  ; 5.147 ; 5.147 ; Rise       ; count[25]       ;
+;  data_sliced[1] ; count[25]  ; 5.457 ; 5.457 ; Rise       ; count[25]       ;
+;  data_sliced[2] ; count[25]  ; 5.274 ; 5.274 ; Rise       ; count[25]       ;
+;  data_sliced[3] ; count[25]  ; 4.967 ; 4.967 ; Rise       ; count[25]       ;
+;  data_sliced[4] ; count[25]  ; 4.796 ; 4.796 ; Rise       ; count[25]       ;
+;  data_sliced[5] ; count[25]  ; 5.139 ; 5.139 ; Rise       ; count[25]       ;
+;  data_sliced[6] ; count[25]  ; 4.902 ; 4.902 ; Rise       ; count[25]       ;
+;  data_sliced[7] ; count[25]  ; 4.961 ; 4.961 ; Rise       ; count[25]       ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------+
+; Setup Transfers                                                    ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; clock      ; clock     ; 26098    ; 0        ; 0        ; 0        ;
+; count[25]  ; clock     ; 1        ; 1        ; 0        ; 0        ;
+; clock      ; count[25] ; 72       ; 0        ; 0        ; 0        ;
+; count[25]  ; count[25] ; 90       ; 0        ; 0        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++--------------------------------------------------------------------+
+; Hold Transfers                                                     ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; clock      ; clock     ; 26098    ; 0        ; 0        ; 0        ;
+; count[25]  ; clock     ; 1        ; 1        ; 0        ; 0        ;
+; clock      ; count[25] ; 72       ; 0        ; 0        ; 0        ;
+; count[25]  ; count[25] ; 90       ; 0        ; 0        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 34    ; 34   ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 8     ; 8    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Dec 19 20:12:22 2015
+Info: Command: quartus_sta teste_Mod_comm -c teste_Mod_comm
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'teste_Mod_comm.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock clock
+    Info (332105): create_clock -period 1.000 -name count[25] count[25]
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -5.739
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -5.739      -583.950 clock 
+    Info (332119):    -1.743       -13.086 count[25] 
+Info (332146): Worst-case hold slack is -2.070
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.070        -2.070 clock 
+    Info (332119):     0.106         0.000 count[25] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380      -244.380 clock 
+    Info (332119):    -0.500       -18.000 count[25] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.042
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.042      -156.665 clock 
+    Info (332119):    -0.212        -1.197 count[25] 
+Info (332146): Worst-case hold slack is -1.406
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.406        -1.406 clock 
+    Info (332119):     0.053         0.000 count[25] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380      -244.380 clock 
+    Info (332119):    -0.500       -18.000 count[25] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 431 megabytes
+    Info: Processing ended: Sat Dec 19 20:12:23 2015
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

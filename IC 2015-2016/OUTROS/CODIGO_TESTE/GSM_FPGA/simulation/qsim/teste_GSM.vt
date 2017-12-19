@@ -1,0 +1,583 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "12/19/2015 17:49:52"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    teste_GSM
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module teste_GSM_vlg_sample_tst(
+	LCD_DATA,
+	RxD,
+	clk,
+	switch,
+	sampler_tx
+);
+input [7:0] LCD_DATA;
+input  RxD;
+input  clk;
+input  switch;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(LCD_DATA or RxD or clk or switch)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module teste_GSM_vlg_check_tst (
+	GPout,
+	LCD_BLON,
+	LCD_DATA,
+	LCD_EN,
+	LCD_ON,
+	LCD_RS,
+	LCD_RW,
+	TxD,
+	erro,
+	led_RX,
+	led_TX,
+	led_TX_data,
+	sampler_rx
+);
+input [7:0] GPout;
+input  LCD_BLON;
+input [7:0] LCD_DATA;
+input  LCD_EN;
+input  LCD_ON;
+input  LCD_RS;
+input  LCD_RW;
+input  TxD;
+input [1:0] erro;
+input  led_RX;
+input  led_TX;
+input [7:0] led_TX_data;
+input sampler_rx;
+
+reg [7:0] GPout_expected;
+reg  LCD_BLON_expected;
+reg [7:0] LCD_DATA_expected;
+reg  LCD_EN_expected;
+reg  LCD_ON_expected;
+reg  LCD_RS_expected;
+reg  LCD_RW_expected;
+reg  TxD_expected;
+reg [1:0] erro_expected;
+reg  led_RX_expected;
+reg  led_TX_expected;
+reg [7:0] led_TX_data_expected;
+
+reg [7:0] GPout_prev;
+reg  LCD_BLON_prev;
+reg [7:0] LCD_DATA_prev;
+reg  LCD_EN_prev;
+reg  LCD_ON_prev;
+reg  LCD_RS_prev;
+reg  LCD_RW_prev;
+reg  TxD_prev;
+reg [1:0] erro_prev;
+reg  led_RX_prev;
+reg  led_TX_prev;
+reg [7:0] led_TX_data_prev;
+
+reg [7:0] GPout_expected_prev;
+reg  TxD_expected_prev;
+reg [7:0] led_TX_data_expected_prev;
+
+reg [7:0] last_GPout_exp;
+reg  last_TxD_exp;
+reg [7:0] last_led_TX_data_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:12] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 12'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	GPout_prev = GPout;
+	LCD_BLON_prev = LCD_BLON;
+	LCD_DATA_prev = LCD_DATA;
+	LCD_EN_prev = LCD_EN;
+	LCD_ON_prev = LCD_ON;
+	LCD_RS_prev = LCD_RS;
+	LCD_RW_prev = LCD_RW;
+	TxD_prev = TxD;
+	erro_prev = erro;
+	led_RX_prev = led_RX;
+	led_TX_prev = led_TX;
+	led_TX_data_prev = led_TX_data;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	GPout_expected_prev = GPout_expected;
+	TxD_expected_prev = TxD_expected;
+	led_TX_data_expected_prev = led_TX_data_expected;
+end
+
+
+// expected led_TX_data[ 7 ]
+initial
+begin
+	led_TX_data_expected[7] = 1'b0;
+end 
+// expected led_TX_data[ 6 ]
+initial
+begin
+	led_TX_data_expected[6] = 1'b0;
+end 
+// expected led_TX_data[ 5 ]
+initial
+begin
+	led_TX_data_expected[5] = 1'b0;
+end 
+// expected led_TX_data[ 4 ]
+initial
+begin
+	led_TX_data_expected[4] = 1'b0;
+end 
+// expected led_TX_data[ 3 ]
+initial
+begin
+	led_TX_data_expected[3] = 1'b0;
+end 
+// expected led_TX_data[ 2 ]
+initial
+begin
+	led_TX_data_expected[2] = 1'b0;
+end 
+// expected led_TX_data[ 1 ]
+initial
+begin
+	led_TX_data_expected[1] = 1'b0;
+end 
+// expected led_TX_data[ 0 ]
+initial
+begin
+	led_TX_data_expected[0] = 1'b0;
+end 
+
+// expected TxD
+initial
+begin
+	TxD_expected = 1'bX;
+end 
+// expected GPout[ 7 ]
+initial
+begin
+	GPout_expected[7] = 1'bX;
+end 
+// expected GPout[ 6 ]
+initial
+begin
+	GPout_expected[6] = 1'bX;
+end 
+// expected GPout[ 5 ]
+initial
+begin
+	GPout_expected[5] = 1'bX;
+end 
+// expected GPout[ 4 ]
+initial
+begin
+	GPout_expected[4] = 1'bX;
+end 
+// expected GPout[ 3 ]
+initial
+begin
+	GPout_expected[3] = 1'bX;
+end 
+// expected GPout[ 2 ]
+initial
+begin
+	GPout_expected[2] = 1'bX;
+end 
+// expected GPout[ 1 ]
+initial
+begin
+	GPout_expected[1] = 1'bX;
+end 
+// expected GPout[ 0 ]
+initial
+begin
+	GPout_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(GPout_expected or GPout or LCD_BLON_expected or LCD_BLON or LCD_DATA_expected or LCD_DATA or LCD_EN_expected or LCD_EN or LCD_ON_expected or LCD_ON or LCD_RS_expected or LCD_RS or LCD_RW_expected or LCD_RW or TxD_expected or TxD or erro_expected or erro or led_RX_expected or led_RX or led_TX_expected or led_TX or led_TX_data_expected or led_TX_data)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected GPout = %b | expected LCD_BLON = %b | expected LCD_DATA = %b | expected LCD_EN = %b | expected LCD_ON = %b | expected LCD_RS = %b | expected LCD_RW = %b | expected TxD = %b | expected erro = %b | expected led_RX = %b | expected led_TX = %b | expected led_TX_data = %b | ",GPout_expected_prev,LCD_BLON_expected_prev,LCD_DATA_expected_prev,LCD_EN_expected_prev,LCD_ON_expected_prev,LCD_RS_expected_prev,LCD_RW_expected_prev,TxD_expected_prev,erro_expected_prev,led_RX_expected_prev,led_TX_expected_prev,led_TX_data_expected_prev);
+	$display("| real GPout = %b | real LCD_BLON = %b | real LCD_DATA = %b | real LCD_EN = %b | real LCD_ON = %b | real LCD_RS = %b | real LCD_RW = %b | real TxD = %b | real erro = %b | real led_RX = %b | real led_TX = %b | real led_TX_data = %b | ",GPout_prev,LCD_BLON_prev,LCD_DATA_prev,LCD_EN_prev,LCD_ON_prev,LCD_RS_prev,LCD_RW_prev,TxD_prev,erro_prev,led_RX_prev,led_TX_prev,led_TX_data_prev);
+`endif
+	if (
+		( GPout_expected_prev[0] !== 1'bx ) && ( GPout_prev[0] !== GPout_expected_prev[0] )
+		&& ((GPout_expected_prev[0] !== last_GPout_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port GPout[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", GPout_expected_prev);
+		$display ("     Real value = %b", GPout_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_GPout_exp[0] = GPout_expected_prev[0];
+	end
+	if (
+		( GPout_expected_prev[1] !== 1'bx ) && ( GPout_prev[1] !== GPout_expected_prev[1] )
+		&& ((GPout_expected_prev[1] !== last_GPout_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port GPout[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", GPout_expected_prev);
+		$display ("     Real value = %b", GPout_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_GPout_exp[1] = GPout_expected_prev[1];
+	end
+	if (
+		( GPout_expected_prev[2] !== 1'bx ) && ( GPout_prev[2] !== GPout_expected_prev[2] )
+		&& ((GPout_expected_prev[2] !== last_GPout_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port GPout[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", GPout_expected_prev);
+		$display ("     Real value = %b", GPout_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_GPout_exp[2] = GPout_expected_prev[2];
+	end
+	if (
+		( GPout_expected_prev[3] !== 1'bx ) && ( GPout_prev[3] !== GPout_expected_prev[3] )
+		&& ((GPout_expected_prev[3] !== last_GPout_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port GPout[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", GPout_expected_prev);
+		$display ("     Real value = %b", GPout_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_GPout_exp[3] = GPout_expected_prev[3];
+	end
+	if (
+		( GPout_expected_prev[4] !== 1'bx ) && ( GPout_prev[4] !== GPout_expected_prev[4] )
+		&& ((GPout_expected_prev[4] !== last_GPout_exp[4]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port GPout[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", GPout_expected_prev);
+		$display ("     Real value = %b", GPout_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_GPout_exp[4] = GPout_expected_prev[4];
+	end
+	if (
+		( GPout_expected_prev[5] !== 1'bx ) && ( GPout_prev[5] !== GPout_expected_prev[5] )
+		&& ((GPout_expected_prev[5] !== last_GPout_exp[5]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port GPout[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", GPout_expected_prev);
+		$display ("     Real value = %b", GPout_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_GPout_exp[5] = GPout_expected_prev[5];
+	end
+	if (
+		( GPout_expected_prev[6] !== 1'bx ) && ( GPout_prev[6] !== GPout_expected_prev[6] )
+		&& ((GPout_expected_prev[6] !== last_GPout_exp[6]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port GPout[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", GPout_expected_prev);
+		$display ("     Real value = %b", GPout_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_GPout_exp[6] = GPout_expected_prev[6];
+	end
+	if (
+		( GPout_expected_prev[7] !== 1'bx ) && ( GPout_prev[7] !== GPout_expected_prev[7] )
+		&& ((GPout_expected_prev[7] !== last_GPout_exp[7]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port GPout[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", GPout_expected_prev);
+		$display ("     Real value = %b", GPout_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_GPout_exp[7] = GPout_expected_prev[7];
+	end
+	if (
+		( TxD_expected_prev !== 1'bx ) && ( TxD_prev !== TxD_expected_prev )
+		&& ((TxD_expected_prev !== last_TxD_exp) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port TxD :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", TxD_expected_prev);
+		$display ("     Real value = %b", TxD_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_TxD_exp = TxD_expected_prev;
+	end
+	if (
+		( led_TX_data_expected_prev[0] !== 1'bx ) && ( led_TX_data_prev[0] !== led_TX_data_expected_prev[0] )
+		&& ((led_TX_data_expected_prev[0] !== last_led_TX_data_exp[0]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port led_TX_data[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", led_TX_data_expected_prev);
+		$display ("     Real value = %b", led_TX_data_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_led_TX_data_exp[0] = led_TX_data_expected_prev[0];
+	end
+	if (
+		( led_TX_data_expected_prev[1] !== 1'bx ) && ( led_TX_data_prev[1] !== led_TX_data_expected_prev[1] )
+		&& ((led_TX_data_expected_prev[1] !== last_led_TX_data_exp[1]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port led_TX_data[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", led_TX_data_expected_prev);
+		$display ("     Real value = %b", led_TX_data_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_led_TX_data_exp[1] = led_TX_data_expected_prev[1];
+	end
+	if (
+		( led_TX_data_expected_prev[2] !== 1'bx ) && ( led_TX_data_prev[2] !== led_TX_data_expected_prev[2] )
+		&& ((led_TX_data_expected_prev[2] !== last_led_TX_data_exp[2]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port led_TX_data[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", led_TX_data_expected_prev);
+		$display ("     Real value = %b", led_TX_data_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_led_TX_data_exp[2] = led_TX_data_expected_prev[2];
+	end
+	if (
+		( led_TX_data_expected_prev[3] !== 1'bx ) && ( led_TX_data_prev[3] !== led_TX_data_expected_prev[3] )
+		&& ((led_TX_data_expected_prev[3] !== last_led_TX_data_exp[3]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port led_TX_data[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", led_TX_data_expected_prev);
+		$display ("     Real value = %b", led_TX_data_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_led_TX_data_exp[3] = led_TX_data_expected_prev[3];
+	end
+	if (
+		( led_TX_data_expected_prev[4] !== 1'bx ) && ( led_TX_data_prev[4] !== led_TX_data_expected_prev[4] )
+		&& ((led_TX_data_expected_prev[4] !== last_led_TX_data_exp[4]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port led_TX_data[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", led_TX_data_expected_prev);
+		$display ("     Real value = %b", led_TX_data_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_led_TX_data_exp[4] = led_TX_data_expected_prev[4];
+	end
+	if (
+		( led_TX_data_expected_prev[5] !== 1'bx ) && ( led_TX_data_prev[5] !== led_TX_data_expected_prev[5] )
+		&& ((led_TX_data_expected_prev[5] !== last_led_TX_data_exp[5]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port led_TX_data[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", led_TX_data_expected_prev);
+		$display ("     Real value = %b", led_TX_data_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_led_TX_data_exp[5] = led_TX_data_expected_prev[5];
+	end
+	if (
+		( led_TX_data_expected_prev[6] !== 1'bx ) && ( led_TX_data_prev[6] !== led_TX_data_expected_prev[6] )
+		&& ((led_TX_data_expected_prev[6] !== last_led_TX_data_exp[6]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port led_TX_data[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", led_TX_data_expected_prev);
+		$display ("     Real value = %b", led_TX_data_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_led_TX_data_exp[6] = led_TX_data_expected_prev[6];
+	end
+	if (
+		( led_TX_data_expected_prev[7] !== 1'bx ) && ( led_TX_data_prev[7] !== led_TX_data_expected_prev[7] )
+		&& ((led_TX_data_expected_prev[7] !== last_led_TX_data_exp[7]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port led_TX_data[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", led_TX_data_expected_prev);
+		$display ("     Real value = %b", led_TX_data_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_led_TX_data_exp[7] = led_TX_data_expected_prev[7];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#10000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module teste_GSM_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [7:0] treg_LCD_DATA;
+reg RxD;
+reg clk;
+reg switch;
+// wires                                               
+wire [7:0] GPout;
+wire LCD_BLON;
+wire [7:0] LCD_DATA;
+wire LCD_EN;
+wire LCD_ON;
+wire LCD_RS;
+wire LCD_RW;
+wire TxD;
+wire [1:0] erro;
+wire led_RX;
+wire led_TX;
+wire [7:0] led_TX_data;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+assign LCD_DATA = treg_LCD_DATA;
+teste_GSM i1 (
+// port map - connection between master ports and signals/registers   
+	.GPout(GPout),
+	.LCD_BLON(LCD_BLON),
+	.LCD_DATA(LCD_DATA),
+	.LCD_EN(LCD_EN),
+	.LCD_ON(LCD_ON),
+	.LCD_RS(LCD_RS),
+	.LCD_RW(LCD_RW),
+	.RxD(RxD),
+	.TxD(TxD),
+	.clk(clk),
+	.erro(erro),
+	.led_RX(led_RX),
+	.led_TX(led_TX),
+	.led_TX_data(led_TX_data),
+	.switch(switch)
+);
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #2500 1'b1;
+	#2500;
+end 
+
+teste_GSM_vlg_sample_tst tb_sample (
+	.LCD_DATA(LCD_DATA),
+	.RxD(RxD),
+	.clk(clk),
+	.switch(switch),
+	.sampler_tx(sampler)
+);
+
+teste_GSM_vlg_check_tst tb_out(
+	.GPout(GPout),
+	.LCD_BLON(LCD_BLON),
+	.LCD_DATA(LCD_DATA),
+	.LCD_EN(LCD_EN),
+	.LCD_ON(LCD_ON),
+	.LCD_RS(LCD_RS),
+	.LCD_RW(LCD_RW),
+	.TxD(TxD),
+	.erro(erro),
+	.led_RX(led_RX),
+	.led_TX(led_TX),
+	.led_TX_data(led_TX_data),
+	.sampler_rx(sampler)
+);
+endmodule
+

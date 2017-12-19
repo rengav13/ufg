@@ -1,0 +1,9 @@
+
+State Machine - |controle|controle2:control|state
+Name state.LED_VIBRA_APITA state.LED_VIBRA2 state.LED_VIBRA1 state.LED state.STAND_BY state.000 
+state.000 0 0 0 0 0 0 
+state.STAND_BY 0 0 0 0 1 1 
+state.LED 0 0 0 1 0 1 
+state.LED_VIBRA1 0 0 1 0 0 1 
+state.LED_VIBRA2 0 1 0 0 0 1 
+state.LED_VIBRA_APITA 1 0 0 0 0 1 

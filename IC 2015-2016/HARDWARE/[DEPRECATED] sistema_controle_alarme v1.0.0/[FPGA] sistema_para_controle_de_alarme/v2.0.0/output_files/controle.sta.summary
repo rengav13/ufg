@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clk'
+Slack : -6.889
+TNS   : -200.433
+
+Type  : Slow Model Setup 'clock_atraso:clock_atraso|clock_out'
+Slack : -1.880
+TNS   : -14.098
+
+Type  : Slow Model Setup 'clock_atraso:clock_atraso|slow_count[25]'
+Slack : 1.025
+TNS   : 0.000
+
+Type  : Slow Model Hold 'clk'
+Slack : -2.129
+TNS   : -2.129
+
+Type  : Slow Model Hold 'clock_atraso:clock_atraso|slow_count[25]'
+Slack : -0.773
+TNS   : -0.773
+
+Type  : Slow Model Hold 'clock_atraso:clock_atraso|clock_out'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.631
+TNS   : -99.391
+
+Type  : Slow Model Minimum Pulse Width 'clock_atraso:clock_atraso|clock_out'
+Slack : -0.611
+TNS   : -10.998
+
+Type  : Slow Model Minimum Pulse Width 'clock_atraso:clock_atraso|slow_count[25]'
+Slack : -0.611
+TNS   : -1.222
+
+Type  : Fast Model Setup 'clk'
+Slack : -2.052
+TNS   : -42.076
+
+Type  : Fast Model Setup 'clock_atraso:clock_atraso|clock_out'
+Slack : -0.210
+TNS   : -0.898
+
+Type  : Fast Model Setup 'clock_atraso:clock_atraso|slow_count[25]'
+Slack : 0.782
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.571
+TNS   : -1.571
+
+Type  : Fast Model Hold 'clock_atraso:clock_atraso|slow_count[25]'
+Slack : -0.402
+TNS   : -0.402
+
+Type  : Fast Model Hold 'clock_atraso:clock_atraso|clock_out'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -81.380
+
+Type  : Fast Model Minimum Pulse Width 'clock_atraso:clock_atraso|clock_out'
+Slack : -0.500
+TNS   : -9.000
+
+Type  : Fast Model Minimum Pulse Width 'clock_atraso:clock_atraso|slow_count[25]'
+Slack : -0.500
+TNS   : -1.000
+
+------------------------------------------------------------

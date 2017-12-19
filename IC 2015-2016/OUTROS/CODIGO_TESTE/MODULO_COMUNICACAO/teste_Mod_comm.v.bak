@@ -1,0 +1,26 @@
+/* Projeto cadeirinha de BEBE - PIBIC-2015-2/2016-1
+ * @Vagner Luciano da Costa Silva
+ *	Modulo para teste do modulo de central de processamento
+ *	Recebe sinais do modulo interface_sensores e dados de localização do GSM/GPS 
+ * e transforma em pacotes de 1byte para serem enviados para transmissão
+ *
+ * clock --> 50MHz
+ * Recebe dados de 86 em 86 segundos
+ */
+module comunication(
+				input[7:0] child,
+				input clock,
+				input[560:0] position,
+				output reg[7:0] data_out);
+				
+reg[32:0] count = 0;
+reg clock_86sec = 1'b0;
+
+always @(posedge clock) begin
+	count = count +1'b;
+end
+always @(posedge count[32]) begin
+	clock_86sec != clock_86sec;
+end 
+
+endmodule

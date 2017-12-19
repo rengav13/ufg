@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at teste_GPS.v(70): always construct contains both blocking and non-blocking assignments

@@ -1,0 +1,36 @@
+/* Modulo de verificação de erro
+ *
+ * -V0.0: recebe caracteres aleatorios e verifica se são iguais aos comandos de erros
+ *
+*/
+module verificacao_erro(
+						input clk,
+						input[7:0] data,
+						input data_ready,
+						output erro
+								);
+								
+//tamanho do comando a ser avaliado
+localparam comand_error_lenght = 100;
+
+//Erros a serem tratados
+localparam erro_conexao_bluetooth = "OK+CONNE";
+localparam falha_conexao_bluetooth = "OK+CONNF";		
+		
+reg[8*comand_error_lenght:0] buffer_data;
+reg[7:0] count;
+
+always@(posedge data_ready) begin
+	buffer_data = {buffer_data[comand_error_lenght-8:0],data};
+	
+	count = count + 1'b;
+end
+
+always@(posedge clk)begin
+	if(comand_error_lenght == count)begin
+		case(buffer_data)
+			erro_conexao_bluetooth : erro = 1'b1;
+			falha_conexao_bluetooth: erro = 1'b1;
+		endcase
+	end
+end

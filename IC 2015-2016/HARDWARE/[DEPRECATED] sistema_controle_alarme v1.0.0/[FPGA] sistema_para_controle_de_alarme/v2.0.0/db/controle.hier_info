@@ -1,0 +1,105 @@
+|controle
+clk => clk.IN2
+button => button.IN1
+crianca[0] => comb.IN0
+crianca[0] => led_peso.DATAIN
+crianca[1] => comb.IN1
+crianca[1] => led_PIR.DATAIN
+communication => communication.IN1
+saida[0] <= controle2:control.port0
+saida[1] <= controle2:control.port0
+saida[2] <= controle2:control.port0
+led <= communication.DB_MAX_OUTPUT_PORT_TYPE
+led_PIR <= crianca[1].DB_MAX_OUTPUT_PORT_TYPE
+led_peso <= crianca[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|suav:suave
+in => in.IN1
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLK => CLK.IN1
+
+
+|controle|suav:suave|shift_register_v:vec
+CLK => bitShiftReg[0].CLK
+CLK => bitShiftReg[1].CLK
+CLK => bitShiftReg[2].CLK
+CLK => bitShiftReg[3].CLK
+CLK => bitShiftReg[4].CLK
+CLK => bitShiftReg[5].CLK
+CLK => bitShiftReg[6].CLK
+CLK => bitShiftReg[7].CLK
+CLK => bitShiftReg[8].CLK
+CLK => bitShiftReg[9].CLK
+CLK => bitShiftReg[10].CLK
+CLK => bitShiftReg[11].CLK
+CLK => bitShiftReg[12].CLK
+CLK => bitShiftReg[13].CLK
+CLK => bitShiftReg[14].CLK
+CLK => bitShiftReg[15].CLK
+CLK => bitShiftReg[16].CLK
+CLK => bitShiftReg[17].CLK
+CLK => bitShiftReg[18].CLK
+CLK => bitShiftReg[19].CLK
+CLK => bitShiftReg[20].CLK
+DATA_IN => bitShiftReg[0].DATAIN
+BIT_OUT <= bitShiftReg[20].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|clock_atraso:clock_atraso
+Clock => slow_count[0].CLK
+Clock => slow_count[1].CLK
+Clock => slow_count[2].CLK
+Clock => slow_count[3].CLK
+Clock => slow_count[4].CLK
+Clock => slow_count[5].CLK
+Clock => slow_count[6].CLK
+Clock => slow_count[7].CLK
+Clock => slow_count[8].CLK
+Clock => slow_count[9].CLK
+Clock => slow_count[10].CLK
+Clock => slow_count[11].CLK
+Clock => slow_count[12].CLK
+Clock => slow_count[13].CLK
+Clock => slow_count[14].CLK
+Clock => slow_count[15].CLK
+Clock => slow_count[16].CLK
+Clock => slow_count[17].CLK
+Clock => slow_count[18].CLK
+Clock => slow_count[19].CLK
+Clock => slow_count[20].CLK
+Clock => slow_count[21].CLK
+Clock => slow_count[22].CLK
+Clock => slow_count[23].CLK
+Clock => slow_count[24].CLK
+Clock => slow_count[25].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|controle2:control
+saida[0] <= saida[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+crianca => always0.IN0
+crianca => always0.IN0
+crianca => always0.IN0
+communication => state.OUTPUTSELECT
+communication => state.OUTPUTSELECT
+communication => state.OUTPUTSELECT
+communication => state.OUTPUTSELECT
+communication => state.OUTPUTSELECT
+communication => state.OUTPUTSELECT
+communication => saida.OUTPUTSELECT
+communication => saida.OUTPUTSELECT
+communication => saida.OUTPUTSELECT
+communication => always0.IN1
+communication => always0.IN1
+communication => always0.IN1
+button => state.DATAA
+button => saida.DATAA
+clk => saida[0]~reg0.CLK
+clk => saida[1]~reg0.CLK
+clk => saida[2]~reg0.CLK
+clk => state~7.DATAIN
+
+

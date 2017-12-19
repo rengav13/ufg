@@ -1,0 +1,18 @@
+////////////////////////////////////////////////////////
+// RS-232 RX and TX module
+// (c) fpga4fun.com & KNJN LLC - 2003 to 2013
+
+// The RS-232 settings are fixed
+// TX: 8-bit data, 2 stop, no-parity
+// RX: 8-bit data, 1 stop, no-parity (the receiver can accept more stop bits of course)
+
+//`define SIMULATION   // in this mode, TX outputs one bit per clock cycle
+                       // and RX receives one bit per clock cycle (for fast simulations)
+
+////////////////////////////////////////////////////////
+// dummy module used to be able to raise an assertion in Verilog
+module ASSERTION_ERROR();
+endmodule
+
+
+////////////////////////////////////////////////////////

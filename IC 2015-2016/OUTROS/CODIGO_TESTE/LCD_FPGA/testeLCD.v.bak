@@ -1,0 +1,8 @@
+module interface_LCD(
+						output[7:0] data,
+						output register_select,
+						output read_write,
+						output enable
+						);
+
+endmodule

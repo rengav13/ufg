@@ -1,0 +1,22 @@
+// 3-digit BCD counter.
+module contador (Clock, clock_out);
+    input Clock;
+    output clock_out;
+	 
+	 reg [25:0] slow_count;
+	 
+    initial
+		clock_out <= 1'b0;
+	 
+	 // Create a 1Hz 4-bit counter
+
+    // A large counter to produce a 1 second (approx) enable
+    always @(posedge Clock)
+        slow_count <= slow_count + 1'b1;
+		  
+	always @(negedge slow_count[25])
+		clock_out <= !clock_out;
+		
+endmodule
+        
+		  

@@ -1,0 +1,5 @@
+module sistema_controle_alarmes();
+
+
+
+controle control(saida, crianca, communication, button, clk);

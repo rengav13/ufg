@@ -1,0 +1,109 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'Ctrl_LCD:LCD|LCD_Display:u1|CLK_400HZ'
+Slack : -6.044
+TNS   : -97.207
+
+Type  : Slow Model Setup 'clk'
+Slack : -3.057
+TNS   : -1127.607
+
+Type  : Slow Model Setup 'async_receiver:RX_arduino|RxD_data_ready'
+Slack : -2.237
+TNS   : -929.979
+
+Type  : Slow Model Hold 'clk'
+Slack : -2.524
+TNS   : -8.924
+
+Type  : Slow Model Hold 'Ctrl_LCD:LCD|LCD_Display:u1|CLK_400HZ'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'async_receiver:RX_arduino|RxD_data_ready'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'clk'
+Slack : -0.745
+TNS   : -10.486
+
+Type  : Slow Model Recovery 'Ctrl_LCD:LCD|LCD_Display:u1|CLK_400HZ'
+Slack : -0.274
+TNS   : -3.502
+
+Type  : Slow Model Removal 'Ctrl_LCD:LCD|LCD_Display:u1|CLK_400HZ'
+Slack : 1.038
+TNS   : 0.000
+
+Type  : Slow Model Removal 'clk'
+Slack : 1.046
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -617.380
+
+Type  : Slow Model Minimum Pulse Width 'async_receiver:RX_arduino|RxD_data_ready'
+Slack : -0.500
+TNS   : -548.000
+
+Type  : Slow Model Minimum Pulse Width 'Ctrl_LCD:LCD|LCD_Display:u1|CLK_400HZ'
+Slack : -0.500
+TNS   : -38.000
+
+Type  : Fast Model Setup 'Ctrl_LCD:LCD|LCD_Display:u1|CLK_400HZ'
+Slack : -2.153
+TNS   : -28.974
+
+Type  : Fast Model Setup 'clk'
+Slack : -0.929
+TNS   : -256.495
+
+Type  : Fast Model Setup 'async_receiver:RX_arduino|RxD_data_ready'
+Slack : -0.545
+TNS   : -168.516
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.570
+TNS   : -7.434
+
+Type  : Fast Model Hold 'Ctrl_LCD:LCD|LCD_Display:u1|CLK_400HZ'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'async_receiver:RX_arduino|RxD_data_ready'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'clk'
+Slack : 0.085
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'Ctrl_LCD:LCD|LCD_Display:u1|CLK_400HZ'
+Slack : 0.267
+TNS   : 0.000
+
+Type  : Fast Model Removal 'clk'
+Slack : 0.588
+TNS   : 0.000
+
+Type  : Fast Model Removal 'Ctrl_LCD:LCD|LCD_Display:u1|CLK_400HZ'
+Slack : 0.610
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -617.380
+
+Type  : Fast Model Minimum Pulse Width 'async_receiver:RX_arduino|RxD_data_ready'
+Slack : -0.500
+TNS   : -548.000
+
+Type  : Fast Model Minimum Pulse Width 'Ctrl_LCD:LCD|LCD_Display:u1|CLK_400HZ'
+Slack : -0.500
+TNS   : -38.000
+
+------------------------------------------------------------

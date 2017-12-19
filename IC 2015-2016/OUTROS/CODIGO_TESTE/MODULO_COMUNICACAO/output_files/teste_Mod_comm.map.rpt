@@ -1,0 +1,497 @@
+Analysis & Synthesis report for teste_Mod_comm
+Sat Dec 19 20:12:03 2015
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |teste_Mod_comm|estado
+  9. State Machine - |teste_Mod_comm|Package_slicer:slicer|state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: suav:suaviza
+ 16. Parameter Settings for User Entity Instance: suav:suaviza|shift_register_v:vec
+ 17. Port Connectivity Checks: "Package_slicer:slicer"
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Dec 19 20:12:03 2015           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; teste_Mod_comm                                  ;
+; Top-level Entity Name              ; teste_Mod_comm                                  ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 405                                             ;
+;     Total combinational functions  ; 304                                             ;
+;     Dedicated logic registers      ; 261                                             ;
+; Total registers                    ; 261                                             ;
+; Total pins                         ; 10                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; teste_Mod_comm     ; teste_Mod_comm     ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                             ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------------+---------+
+; teste_Mod_comm.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Wagner/Documents/ufg/Iniciação Cientifica -2015-1 - FPGA/Projeto/teste mod_com/teste_Mod_comm.v ;         ;
+; Suav.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Wagner/Documents/ufg/Iniciação Cientifica -2015-1 - FPGA/Projeto/teste mod_com/Suav.v           ;         ;
+; ShiftRegN.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Wagner/Documents/ufg/Iniciação Cientifica -2015-1 - FPGA/Projeto/teste mod_com/ShiftRegN.v      ;         ;
+; Package_slicer.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Wagner/Documents/ufg/Iniciação Cientifica -2015-1 - FPGA/Projeto/teste mod_com/Package_slicer.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 405   ;
+;                                             ;       ;
+; Total combinational functions               ; 304   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 82    ;
+;     -- 3 input functions                    ; 63    ;
+;     -- <=2 input functions                  ; 159   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 158   ;
+;     -- arithmetic mode                      ; 146   ;
+;                                             ;       ;
+; Total registers                             ; 261   ;
+;     -- Dedicated logic registers            ; 261   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 10    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clock ;
+; Maximum fan-out                             ; 243   ;
+; Total fan-out                               ; 1438  ;
+; Average fan-out                             ; 2.50  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+--------------+
+; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Library Name ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+--------------+
+; |teste_Mod_comm              ; 304 (79)          ; 261 (117)    ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |teste_Mod_comm                                   ; work         ;
+;    |Package_slicer:slicer|   ; 150 (150)         ; 90 (90)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste_Mod_comm|Package_slicer:slicer             ; work         ;
+;    |suav:suaviza|            ; 75 (75)           ; 54 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste_Mod_comm|suav:suaviza                      ; work         ;
+;       |shift_register_v:vec| ; 0 (0)             ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste_Mod_comm|suav:suaviza|shift_register_v:vec ; work         ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |teste_Mod_comm|estado                                                                                                                  ;
++-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+; Name        ; estado.1001 ; estado.1000 ; estado.0111 ; estado.0110 ; estado.0101 ; estado.0100 ; estado.0011 ; estado.0010 ; estado.0001 ; estado.0000 ;
++-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+; estado.0000 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ;
+; estado.0001 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 1           ;
+; estado.0010 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 1           ;
+; estado.0011 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 1           ;
+; estado.0100 ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 1           ;
+; estado.0101 ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; estado.0110 ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; estado.0111 ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; estado.1000 ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; estado.1001 ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
++-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------+
+; State Machine - |teste_Mod_comm|Package_slicer:slicer|state ;
++-----------+-----------+-----------+-----------+-------------+
+; Name      ; state.010 ; state.001 ; state.000 ; state.111   ;
++-----------+-----------+-----------+-----------+-------------+
+; state.000 ; 0         ; 0         ; 0         ; 0           ;
+; state.001 ; 0         ; 1         ; 1         ; 0           ;
+; state.010 ; 1         ; 0         ; 1         ; 0           ;
+; state.111 ; 0         ; 0         ; 1         ; 1           ;
++-----------+-----------+-----------+-----------+-------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                            ;
++----------------------------------------------+------------------------------------------------+
+; Register name                                ; Reason for Removal                             ;
++----------------------------------------------+------------------------------------------------+
+; Package_slicer:slicer|position[0,2,3,6,7]    ; Merged with Package_slicer:slicer|position[5]  ;
+; Package_slicer:slicer|position[1]            ; Merged with Package_slicer:slicer|position[4]  ;
+; Package_slicer:slicer|position[10,11,13..15] ; Merged with Package_slicer:slicer|position[8]  ;
+; Package_slicer:slicer|position[12]           ; Merged with Package_slicer:slicer|position[9]  ;
+; Package_slicer:slicer|position[21]           ; Merged with Package_slicer:slicer|position[16] ;
+; Package_slicer:slicer|position[20]           ; Merged with Package_slicer:slicer|position[17] ;
+; Package_slicer:slicer|position[19,22,23]     ; Merged with Package_slicer:slicer|position[18] ;
+; Package_slicer:slicer|position[29]           ; Merged with Package_slicer:slicer|position[24] ;
+; Package_slicer:slicer|position[30,31]        ; Merged with Package_slicer:slicer|position[27] ;
+; Package_slicer:slicer|position[39]           ; Merged with Package_slicer:slicer|position[38] ;
+; Package_slicer:slicer|count[0]               ; Merged with count[0]                           ;
+; Package_slicer:slicer|position[4,9,17,25]    ; Stuck at GND due to stuck port data_in         ;
+; Package_slicer:slicer|position[28]           ; Merged with Package_slicer:slicer|position[33] ;
+; Package_slicer:slicer|position[36]           ; Merged with Package_slicer:slicer|position[41] ;
+; Package_slicer:slicer|position[44]           ; Merged with Package_slicer:slicer|position[49] ;
+; Package_slicer:slicer|position[52]           ; Merged with Package_slicer:slicer|position[57] ;
+; Package_slicer:slicer|position[5]            ; Merged with Package_slicer:slicer|position[33] ;
+; estado~2                                     ; Lost fanout                                    ;
+; estado~3                                     ; Lost fanout                                    ;
+; estado~4                                     ; Lost fanout                                    ;
+; estado~5                                     ; Lost fanout                                    ;
+; Package_slicer:slicer|state~4                ; Lost fanout                                    ;
+; Package_slicer:slicer|state~5                ; Lost fanout                                    ;
+; Package_slicer:slicer|count[1]               ; Merged with count[1]                           ;
+; Package_slicer:slicer|count[2]               ; Merged with count[2]                           ;
+; Package_slicer:slicer|count[3]               ; Merged with count[3]                           ;
+; Package_slicer:slicer|count[4]               ; Merged with count[4]                           ;
+; Package_slicer:slicer|count[5]               ; Merged with count[5]                           ;
+; Package_slicer:slicer|count[6]               ; Merged with count[6]                           ;
+; Package_slicer:slicer|count[7]               ; Merged with count[7]                           ;
+; Package_slicer:slicer|count[8]               ; Merged with count[8]                           ;
+; Package_slicer:slicer|count[9]               ; Merged with count[9]                           ;
+; Package_slicer:slicer|count[10]              ; Merged with count[10]                          ;
+; Package_slicer:slicer|count[11]              ; Merged with count[11]                          ;
+; Package_slicer:slicer|count[12]              ; Merged with count[12]                          ;
+; Package_slicer:slicer|count[13]              ; Merged with count[13]                          ;
+; Package_slicer:slicer|count[14]              ; Merged with count[14]                          ;
+; Package_slicer:slicer|count[15]              ; Merged with count[15]                          ;
+; Package_slicer:slicer|count[16]              ; Merged with count[16]                          ;
+; Package_slicer:slicer|count[17]              ; Merged with count[17]                          ;
+; Package_slicer:slicer|count[18]              ; Merged with count[18]                          ;
+; Package_slicer:slicer|count[19]              ; Merged with count[19]                          ;
+; Package_slicer:slicer|count[20]              ; Merged with count[20]                          ;
+; Package_slicer:slicer|count[21]              ; Merged with count[21]                          ;
+; Package_slicer:slicer|count[22]              ; Merged with count[22]                          ;
+; Package_slicer:slicer|count[23]              ; Merged with count[23]                          ;
+; Package_slicer:slicer|count[24]              ; Merged with count[24]                          ;
+; Total Number of Removed Registers = 61       ;                                                ;
++----------------------------------------------+------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                            ;
++-----------------------------------+---------------------------+------------------------------------------------------------------------+
+; Register name                     ; Reason for Removal        ; Registers Removed due to This Register                                 ;
++-----------------------------------+---------------------------+------------------------------------------------------------------------+
+; Package_slicer:slicer|position[4] ; Stuck at GND              ; Package_slicer:slicer|position[9], Package_slicer:slicer|position[17], ;
+;                                   ; due to stuck port data_in ; Package_slicer:slicer|position[25]                                     ;
++-----------------------------------+---------------------------+------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 261   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 114   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; Package_slicer:slicer|count_delay[30]   ; 1       ;
+; Package_slicer:slicer|count_delay[29]   ; 1       ;
+; Package_slicer:slicer|count_delay[28]   ; 1       ;
+; Package_slicer:slicer|count_delay[27]   ; 1       ;
+; Package_slicer:slicer|count_delay[26]   ; 1       ;
+; Package_slicer:slicer|count_delay[25]   ; 1       ;
+; Package_slicer:slicer|count_delay[24]   ; 1       ;
+; Package_slicer:slicer|count_delay[23]   ; 1       ;
+; Package_slicer:slicer|count_delay[22]   ; 1       ;
+; Package_slicer:slicer|count_delay[21]   ; 1       ;
+; Package_slicer:slicer|count_delay[20]   ; 1       ;
+; Package_slicer:slicer|count_delay[19]   ; 1       ;
+; Package_slicer:slicer|count_delay[18]   ; 1       ;
+; Package_slicer:slicer|count_delay[17]   ; 1       ;
+; Package_slicer:slicer|count_delay[16]   ; 1       ;
+; Package_slicer:slicer|count_delay[15]   ; 1       ;
+; Package_slicer:slicer|count_delay[14]   ; 1       ;
+; Package_slicer:slicer|count_delay[13]   ; 1       ;
+; Package_slicer:slicer|count_delay[12]   ; 1       ;
+; Package_slicer:slicer|count_delay[11]   ; 1       ;
+; Package_slicer:slicer|count_delay[10]   ; 1       ;
+; Package_slicer:slicer|count_delay[9]    ; 1       ;
+; Package_slicer:slicer|count_delay[8]    ; 1       ;
+; Package_slicer:slicer|count_delay[7]    ; 1       ;
+; Package_slicer:slicer|count_delay[6]    ; 1       ;
+; Package_slicer:slicer|count_delay[5]    ; 1       ;
+; Package_slicer:slicer|count_delay[4]    ; 1       ;
+; Package_slicer:slicer|count_delay[3]    ; 1       ;
+; Package_slicer:slicer|count_delay[2]    ; 1       ;
+; Package_slicer:slicer|count_delay[1]    ; 1       ;
+; Package_slicer:slicer|count_delay[0]    ; 2       ;
+; Total number of inverted registers = 31 ;         ;
++-----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |teste_Mod_comm|Package_slicer:slicer|position[5]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |teste_Mod_comm|Package_slicer:slicer|position[49] ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |teste_Mod_comm|Package_slicer:slicer|position[24] ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |teste_Mod_comm|Package_slicer:slicer|data_out[7]  ;
+; 10:1               ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |teste_Mod_comm|data_sliced[0]~reg0                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: suav:suaviza ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; N              ; 8     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: suav:suaviza|shift_register_v:vec ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; N              ; 21    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Package_slicer:slicer"                                                                           ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; child[7..1]       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; latitude[28..26]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; latitude[17..15]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; latitude[13..11]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; latitude[9..8]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; latitude[4..0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; latitude[30..29]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; latitude[23..18]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; latitude[7..5]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; latitude[31]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; latitude[25]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; latitude[24]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; latitude[14]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; latitude[10]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; longitude[31..30] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; longitude[28..27] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; longitude[23..22] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; longitude[19..18] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; longitude[7..5]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; longitude[3..2]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; longitude[26..24] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; longitude[21..20] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; longitude[17..8]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; longitude[29]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; longitude[4]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; longitude[1]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; longitude[0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; busy              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Dec 19 20:12:00 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off teste_Mod_comm -c teste_Mod_comm
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file teste_mod_comm.v
+    Info (12023): Found entity 1: teste_Mod_comm
+Info (12021): Found 1 design units, including 1 entities, in source file suav.v
+    Info (12023): Found entity 1: suav
+Info (12021): Found 1 design units, including 1 entities, in source file shiftregn.v
+    Info (12023): Found entity 1: shift_register_v
+Info (12021): Found 1 design units, including 1 entities, in source file package_slicer.v
+    Info (12023): Found entity 1: Package_slicer
+Info (12021): Found 0 design units, including 0 entities, in source file teste.v
+Warning (10236): Verilog HDL Implicit Net warning at Suav.v(9): created implicit net for "BIT_OUT"
+Info (12127): Elaborating entity "teste_Mod_comm" for the top level hierarchy
+Info (10264): Verilog HDL Case Statement information at teste_Mod_comm.v(49): all case item expressions in this case statement are onehot
+Info (12128): Elaborating entity "suav" for hierarchy "suav:suaviza"
+Info (12128): Elaborating entity "shift_register_v" for hierarchy "suav:suaviza|shift_register_v:vec"
+Info (12128): Elaborating entity "Package_slicer" for hierarchy "Package_slicer:slicer"
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/Wagner/Documents/ufg/Iniciação Cientifica -2015-1 - FPGA/Projeto/teste mod_com/output_files/teste_Mod_comm.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 452 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 442 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 485 megabytes
+    Info: Processing ended: Sat Dec 19 20:12:03 2015
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Wagner/Documents/ufg/Iniciação Cientifica -2015-1 - FPGA/Projeto/teste mod_com/output_files/teste_Mod_comm.map.smsg.
+
+

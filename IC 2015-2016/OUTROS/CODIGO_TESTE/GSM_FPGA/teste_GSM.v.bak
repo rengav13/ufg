@@ -1,0 +1,105 @@
+/*Procurar o programa DE1_control_panel.exe no CD-rom de da DE1(para tentar usar o terminal no computador)
+ * -Usando um clock de 27MHz a transmissao e o envio de dados são conrrompidos.
+*/
+
+module teste_GSM(
+    input clk,
+	 input RxD,
+	 input switch,
+    output TxD,
+	
+	//Sinais para teste
+    output reg [7:0] GPout,  // led_RX_data
+	 output wire [7:0] led_TX_data,
+	 output wire led_TX,
+	 output wire led_RX,
+	 output wire[1:0] erro
+);
+
+wire RxD_data_ready;
+wire [7:0] RxD_data;
+wire TxD_busy;
+
+reg[7:0] GPin = "A";
+//reg[7:0] GPout_arduino;
+
+assign led_TX = TxD;
+assign led_RX = RxD;
+assign led_TX_arduino = TxD_arduino;
+assign led_RX_arduino = RxD_arduino;
+assign led_TX_data = GPin;
+
+
+//Codigo de verificação de erro
+//verificacao_erro verifica(.clk(clk),.data(GPout),.data_ready(RxD_data_ready_arduino),.erro(erro));
+
+//Recebe do GSM
+					//clk     ,Baud,oversample
+async_receiver #(50000000,9600,16) RX_arduino(.clk(clk), .RxD(RxD), .RxD_data_ready(RxD_data_ready), .RxD_data(RxD_data));
+always @(posedge clk) begin
+	if(RxD_data_ready)begin
+		GPout <= RxD_data;
+	end
+end
+
+reg TxD_start=1'b1;
+
+//teste send to GSM
+						//clk     ,baud
+async_transmitter #(50000000,9600) TX_arduino(.clk(clk), .TxD(TxD), .TxD_start(TxD_start), .TxD_data(GPin),.TxD_busy(TxD_busy));
+
+reg[4:0] state=0;
+always@(negedge TxD_busy) begin
+	case(state)
+		5'b00000:begin
+				GPin = "T";
+				state = 5'b00001;
+				end
+		5'b00001:begin
+				GPin = "+";
+				state = 5'b00010;
+				end
+		5'b00010:begin
+				GPin = "C";
+				state = 5'b00011;
+				end
+		5'b00011:begin
+				GPin = "S";
+				state = 5'b00100;
+				end
+		5'b00100:begin
+				GPin = "C";
+				state = 5'b00101;
+				end
+		5'b00101:begin
+				GPin = "=";
+				state = 5'b00110;
+			end
+		5'b00110:begin
+				GPin = "?";
+				state = 5'b11111;
+			end
+			/*
+		4'b0111:begin
+				GPin = "?";
+				state = 4'b1111;
+			end*/
+		5'b11111: begin 
+				GPin = 0;
+				if(switch)state = 5'b00000;else begin state = 5'b11111; TxD_start = 1'b0; end
+			end
+	endcase
+end
+
+/*always@(posedge RxD_data_ready_arduino) begin
+	if(switch)begin
+			GPin = AT[7:0];
+			TxD_start = 1;
+		end else begin
+			GPin = AT[15:8];
+			TxD_start = 1;
+	end
+	TxD_start= 0;
+end*/
+
+endmodule

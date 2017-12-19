@@ -1,0 +1,20 @@
+
+State Machine - |teste_Mod_comm|estado
+Name estado.1001 estado.1000 estado.0111 estado.0110 estado.0101 estado.0100 estado.0011 estado.0010 estado.0001 estado.0000 
+estado.0000 0 0 0 0 0 0 0 0 0 0 
+estado.0001 0 0 0 0 0 0 0 0 1 1 
+estado.0010 0 0 0 0 0 0 0 1 0 1 
+estado.0011 0 0 0 0 0 0 1 0 0 1 
+estado.0100 0 0 0 0 0 1 0 0 0 1 
+estado.0101 0 0 0 0 1 0 0 0 0 1 
+estado.0110 0 0 0 1 0 0 0 0 0 1 
+estado.0111 0 0 1 0 0 0 0 0 0 1 
+estado.1000 0 1 0 0 0 0 0 0 0 1 
+estado.1001 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |teste_Mod_comm|Package_slicer:slicer|state
+Name state.010 state.001 state.000 state.111 
+state.000 0 0 0 0 
+state.001 0 1 1 0 
+state.010 1 0 1 0 
+state.111 0 0 1 1 

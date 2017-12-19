@@ -1,0 +1,22 @@
+
+State Machine - |teste_GPS|filtra_position_GPGGA:filter_GPGGA|state_pos
+Name state_pos.STATE_SET_DADOS_OUT state_pos.STATE_ALTITUDE_UNIDADE state_pos.STATE_ALTITUDE state_pos.STATE_LONGITUDE_ORIENTATION state_pos.STATE_LONGITUDE state_pos.STATE_LATITUDE_ORIENTATION state_pos.STATE_LATITUDE state_pos.0000 state_pos.STATE_WAIT 
+state_pos.0000 0 0 0 0 0 0 0 0 0 
+state_pos.STATE_LATITUDE 0 0 0 0 0 0 1 1 0 
+state_pos.STATE_LATITUDE_ORIENTATION 0 0 0 0 0 1 0 1 0 
+state_pos.STATE_LONGITUDE 0 0 0 0 1 0 0 1 0 
+state_pos.STATE_LONGITUDE_ORIENTATION 0 0 0 1 0 0 0 1 0 
+state_pos.STATE_ALTITUDE 0 0 1 0 0 0 0 1 0 
+state_pos.STATE_ALTITUDE_UNIDADE 0 1 0 0 0 0 0 1 0 
+state_pos.STATE_SET_DADOS_OUT 1 0 0 0 0 0 0 1 0 
+state_pos.STATE_WAIT 0 0 0 0 0 0 0 1 1 
+
+State Machine - |teste_GPS|filtra_position_GPGGA:filter_GPGGA|state
+Name state.110 state.101 state.100 state.011 state.010 state.001 state.000 
+state.000 0 0 0 0 0 0 0 
+state.001 0 0 0 0 0 1 1 
+state.010 0 0 0 0 1 0 1 
+state.011 0 0 0 1 0 0 1 
+state.100 0 0 1 0 0 0 1 
+state.101 0 1 0 0 0 0 1 
+state.110 1 0 0 0 0 0 1 

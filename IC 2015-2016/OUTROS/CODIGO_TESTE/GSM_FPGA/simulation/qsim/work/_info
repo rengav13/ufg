@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Wagner\Documents\ufg\Iniciação Cientifica -2015-1 - FPGA\Projeto\teste_GSM\simulation\qsim
+vteste_GSM
+Z1 IzPV^4k0jV>keLbYU:ZSaV1
+Z2 VYL9R>GNB]OacF<koWn7`10
+Z3 dC:\Users\Wagner\Documents\ufg\Iniciação Cientifica -2015-1 - FPGA\Projeto\teste_GSM\simulation\qsim
+Z4 w1450554594
+Z5 8teste_GSM.vo
+Z6 Fteste_GSM.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|teste_GSM.vo|
+Z9 o-work work -O0
+Z10 nteste_@g@s@m
+!i10b 1
+Z11 !s100 3Ke7Lg;llcc_mMXmOgPa`0
+!s85 0
+Z12 !s108 1450554598.456000
+Z13 !s107 teste_GSM.vo|
+!s101 -O0
+vteste_GSM_vlg_check_tst
+!i10b 1
+!s100 Y:><I<4:dn]NVa^Td;5kF2
+Ii41AbiaO5]<6BW_9hD@lo3
+VVDlK_RJikj:J2jA]P9QFR2
+R3
+Z14 w1450554593
+Z15 8teste_GSM.vt
+Z16 Fteste_GSM.vt
+L0 63
+R7
+r1
+!s85 0
+31
+Z17 !s108 1450554599.456000
+Z18 !s107 teste_GSM.vt|
+Z19 !s90 -work|work|teste_GSM.vt|
+!s101 -O0
+R9
+Z20 nteste_@g@s@m_vlg_check_tst
+vteste_GSM_vlg_sample_tst
+!i10b 1
+!s100 =O9Z:FeVE>gmRClFmFUTK1
+IiaeNR=iKEfUCXe9=bgZ@P3
+VRj@L`mkiI^EFP7`C46c7m1
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9
+Z21 nteste_@g@s@m_vlg_sample_tst
+vteste_GSM_vlg_vec_tst
+!i10b 1
+!s100 Ci5G73Nz^@1Ddj0XMi4HY2
+I3X?KVKcKe736h:DULHMfz3
+Z22 V<hJHoi@=`ZIf1bJCTKNVg0
+R3
+R14
+R15
+R16
+L0 507
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9
+Z23 nteste_@g@s@m_vlg_vec_tst

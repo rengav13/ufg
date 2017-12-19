@@ -1,0 +1,31 @@
+projeto de iniciação cientifica PIVIC 2015-2
+
+										ESQUEMA DO PROJETO ATUALMENTE
+						  _____________						  ____________
+			CLK--------->|	 		   |---->BluetoothRX   ->| SMARTPHONE |
+StrainGauge			   ->| Smart_Chair |					 |____________|<---|			 
+			PIRSensor -->| (TOP_LEVEL) |   ->GSM_RX-----| 	  ____________     |  
+GPS_STREAM			  -->|			   |				|	 |			  |	   |
+			BluetoothTX->|             |				|--->|	SERVER	  |----|
+GSM_TX			  ------>|_____________|					 |____________|
+			
+										ESQUEMA SMART_CHAIR ATUALMENTE														Nome----------Pino-Pino na placa
+						  _____________	   8b	______________________														CLK----------->N2---->Clock
+			PIRSensor--->|			   |---/-->|					  |			 _____________								StrainGauge--->N25--->SW[0]
+						 |     SUAV    |	   |					  |----|--->|			  |								PIRSensor----->F24--->GPIO_4
+					---->|_____________|       | Interface_Bluetooth  |	   |    |  BLUETOOTH  | 							TxD_bt-------->J22--->GPIO_1
+										  27*8b|					  |	   |	|_____________|								TxD_GSM------->E25--->GPIO_3
+		  ______		 _______________  |-/->|______________________|    |												RxD_bt-------->D25--->GPIO_0
+		 | GPS*	|4*30*8b|  			    | | 							   |												RxD_GSM------->E26--->GPIO_2
+		 |______|---/-->| Interface_GPS*|-| 							   |
+						|_______________|								   |				DEBUG
+						 												   |	   _______________		  ___________
+																		   |----->|				  |		 |		     |					
+																		   		  | Ctrl_display  |----->|  Display  |
+																		   		  |_______________|		 |___________|
+																				  
+										ESQUEMA INTERFACE_GPS
+		 _____			 _________________			
+		|	  | 5*30*8b |				  |  23*8b 
+		| GPS |---/---->| Filtra_Position |---/--->
+		|_____|	  CLK-->|_________________|		   

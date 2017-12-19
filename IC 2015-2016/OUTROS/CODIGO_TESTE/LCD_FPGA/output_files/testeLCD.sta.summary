@@ -1,0 +1,85 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : -2.620
+TNS   : -97.589
+
+Type  : Slow Model Setup 'LCD_Display:u1|CLK_400HZ'
+Slack : -1.454
+TNS   : -30.738
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : -2.519
+TNS   : -2.519
+
+Type  : Slow Model Hold 'LCD_Display:u1|CLK_400HZ'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'CLOCK_50'
+Slack : -0.746
+TNS   : -12.806
+
+Type  : Slow Model Recovery 'LCD_Display:u1|CLK_400HZ'
+Slack : -0.226
+TNS   : -2.044
+
+Type  : Slow Model Removal 'LCD_Display:u1|CLK_400HZ'
+Slack : 0.774
+TNS   : 0.000
+
+Type  : Slow Model Removal 'CLOCK_50'
+Slack : 1.256
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -43.380
+
+Type  : Slow Model Minimum Pulse Width 'LCD_Display:u1|CLK_400HZ'
+Slack : -0.500
+TNS   : -38.000
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : -0.702
+TNS   : -23.007
+
+Type  : Fast Model Setup 'LCD_Display:u1|CLK_400HZ'
+Slack : -0.084
+TNS   : -0.566
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : -1.561
+TNS   : -1.561
+
+Type  : Fast Model Hold 'LCD_Display:u1|CLK_400HZ'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'CLOCK_50'
+Slack : 0.085
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'LCD_Display:u1|CLK_400HZ'
+Slack : 0.291
+TNS   : 0.000
+
+Type  : Fast Model Removal 'LCD_Display:u1|CLK_400HZ'
+Slack : 0.483
+TNS   : 0.000
+
+Type  : Fast Model Removal 'CLOCK_50'
+Slack : 0.685
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -43.380
+
+Type  : Fast Model Minimum Pulse Width 'LCD_Display:u1|CLK_400HZ'
+Slack : -0.500
+TNS   : -38.000
+
+------------------------------------------------------------
